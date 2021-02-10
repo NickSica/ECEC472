@@ -1,0 +1,32 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  ECEC471_Lib
+* Top Cell Name: std_inv_13_62x
+* View Name:     schematic
+* Netlisted on:  Nov  5 17:32:04 2020
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL vdd!
++        gnd!
+
+*.PIN vdd!
+*+    gnd!
+
+************************************************************************
+* Library Name: ECEC471_Lib
+* Cell Name:    std_inv_13_62x
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT std_inv_13_62x in out
+*.PININFO in:I out:O
+MM0 out in gnd! gnd! NMOS_VTL W=1.225u L=50n m=1
+MM1 out in vdd! vdd! PMOS_VTL W=1.94u L=50n m=1
+.ENDS
+

@@ -1,0 +1,10 @@
+CADENCE IHNL01070
+$model
+ECEC472_Lib/gil_cell_mixer/schematic gil_cell_mixer
+$endmodel
+$net
+gnd! gnd!
+vdd! vdd!
+$endnet
+$param
+$endparam

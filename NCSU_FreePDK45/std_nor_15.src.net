@@ -1,0 +1,34 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  ECEC471_Lib
+* Top Cell Name: std_nor_15
+* View Name:     schematic
+* Netlisted on:  Oct 28 20:20:06 2020
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL gnd!
++        vdd!
+
+*.PIN gnd!
+*+    vdd!
+
+************************************************************************
+* Library Name: ECEC471_Lib
+* Cell Name:    std_nor_15
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT std_nor_15 a b out
+*.PININFO a:I b:I out:O
+MM3 out b gnd! gnd! NMOS_VTL W=90n L=50n m=1
+MM0 out a gnd! gnd! NMOS_VTL W=90n L=50n m=1
+MM2 out b net15 vdd! PMOS_VTL W=547.5n L=50n m=1
+MM1 net15 a vdd! vdd! PMOS_VTL W=547.5n L=50n m=1
+.ENDS
+

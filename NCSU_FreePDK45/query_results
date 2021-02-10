@@ -1,0 +1,5 @@
+mgc_rve_context_lcv "ECEC471_Lib" "std_inv_chain" "layout" 2000
+mgc_rve_highlight_index 0 "11" "#00000000FFFF"
+mgc_rve_layer "pwell"
+mr 0 -1.725 0.9475 0
+mgc_rve_zoom -0.203 -2.0945 1.1505 0.3695 1

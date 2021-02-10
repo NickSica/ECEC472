@@ -1,0 +1,33 @@
+//
+//  CalibreView Settings:
+//	  Netlist File: /home/njs82@drexel.edu/ECEC471/NCSU_FreePDK45/runs/std_inv_chain.pex.netlist
+//	  Output Library: ECEC471_Lib
+//	  Schematic Library: ECEC471_Lib
+//	  Cellmap File: /home/njs82@drexel.edu/ECEC471/calview.cellmap
+//	  Log File: ./calview.log
+//	  Calibre View Name: calibre
+//	  Calibre View Type: schematic
+//	  Magnify Devices by: 1.000000
+//	  Magnify Parasitics by: 1.000000
+//	  Create Terminals: Create all terminals
+//	  Reset Properties: ("m=1")
+//	  Generate SPECTRE Netlist: off
+//
+WARNING: Overriding existing view ECEC471_Lib/std_inv_chain/calibre
+beta code that is subject to the terms of the current Mentor
+//         Graphics End-User License Agreement or your signed agreement
+//         with Mentor Graphics that contains beta terms, whichever applies.
+//
+//  Running on Linux xunil-03.coe.drexel.edu 3.10.0-1127.19.1.el7.x86_64 #1 SMP Tue Aug 25 17:23:54 UTC 2020 x86_64
+INFO: Parsing command line arguments...
+INFO: License checked out successfully for calibreqdb.
+INFO: Parsing cellmap file...
+INFO: Executing back annotation...
+INFO: Creating new view: calibre in library: ECEC471_Lib cell: std_inv_chain.
+WARNING: Creating an inputOutput terminal GND! in (std_inv_chain calibre) since matching terminal was not found on symbol.
+INFO: Marking net GND! as a global net.
+WARNING: Creating an inputOutput terminal VDD! in (std_inv_chain calibre) since matching terminal was not found on symbol.
+INFO: Marking net VDD! as a global net.
+WARNING: Creating an inputOutput terminal IN in (std_inv_chain calibre) since matching terminal was not found on symbol.
+WARNING: Creating an inputOutput terminal OUT in (std_inv_chain calibre) since matching terminal was not found on symbol.
+INFO: Back annotation is completed.

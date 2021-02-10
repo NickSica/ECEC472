@@ -1,0 +1,45 @@
+#!/bin/bash
+### Common Cadence Virtusos Settings Across PDKs ###
+export CADENCEDIR=/opt/cadence
+
+export CDSHOME=/opt/cadence/$VIRT_VERSION
+export CDS=/opt/cadence/$VIRT_VERSION
+
+export PATH=${CDSHOME}/tools/bin:${CDSHOME}/tools/dfII/bin:${CDSHOME}/tools/dracula/bin:${CDSHOME}/tools/plot/bin:${CDSHOME}/tools/iccraft/bin:${PATH}
+
+export CDS_Netlisting_Mode=Analog
+export CDS_AUTO_64BIT=ALL
+
+# Assura
+export ASSURAHOME=/opt/cadence/$ASSURA_VERSION
+export PATH=$PATH:$ASSURAHOME/bin:$ASSURAHOME/tools/bin
+# MMSIM
+export MMSIMHOME=/opt/cadence/$MMSIM_VERSION
+export PATH=$MMSIMHOME/tools.lnx86/bin:$PATH
+
+### QRC PATH SETTINGS ###
+#export QRC_HOME=/opt/cadence/PVE121
+#export PATH=$QRC_HOME/bin:$QRC_HOME/tools/bin:$PATH
+
+### ENCOUNTER PATH SETTINGS ###
+#export ENCOUNTERDIR=/opt/cadence/EDI132
+#export PATH=$ENCOUNTERDIR/tools.lnx86/bin:$PATH
+
+### CALIBRE SETUP ###
+export CALIBRE_HOME=/opt/mentor/ixl_cal_2013.3_39.24
+export MGC_HOME=/opt/mentor/ixl_cal_2013.3_39.24
+export PATH=$PATH:$MGC_HOME/bin
+
+#export LM_LICENSE_FILE=1717@license1.ece.drexel.edu:27909@License01.coe.drexel.edu:5228@license04.coe.drexel.edu:7171@license03.coe.drexel.edu
+
+export LM_LICENSE_FILE=5228@license04.coe.drexel.edu:7171@license03.coe.drexel.edu
+
+
+# Settings for Unsupported OS (Set default case to RHEL50)
+if [ $VIRT_VERSION = "IC615" ]; then
+   export OA_UNSUPPORTED_PLAT=linux_rhel40_gcc44x
+else
+   export OA_UNSUPPORTED_PLAT=linux_rhel50_gcc44x
+fi
+# Gets rid of warnings when starting virtuoso
+export W3264_NO_HOST_CHECK=1

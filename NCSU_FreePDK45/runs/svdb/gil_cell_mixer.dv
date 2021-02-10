@@ -1,0 +1,6 @@
+# CALIBRE-LVS DISCREPANCY VIEWER TCL FILE 
+# FILE: svdb/gil_cell_mixer.dv
+dv_start matched                                  
+dv_cell {gil_cell_mixer} {gil_cell_mixer} matched
+dv_obj_count -transformed_nets {10 10} -transformed_inst {8 8} -transformed_port {8 8}
+dv_end

@@ -1,0 +1,66 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  ECEC471_Lib
+* Top Cell Name: std_d_flip_flop
+* View Name:     schematic
+* Netlisted on:  Nov 21 15:57:25 2020
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL vdd!
++        gnd!
+
+*.PIN vdd!
+*+    gnd!
+
+************************************************************************
+* Library Name: ECEC471_Lib
+* Cell Name:    std_nand_15
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT std_nand_15 a b out
+*.PININFO a:I b:I out:O
+MM1 net19 b gnd! gnd! NMOS_VTL W=200n L=50n m=1
+MM0 out a net19 gnd! NMOS_VTL W=200n L=50n m=1
+MM3 out b vdd! vdd! PMOS_VTL W=90n L=50n m=1
+MM2 out a vdd! vdd! PMOS_VTL W=90n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: ECEC471_Lib
+* Cell Name:    std_nand_3
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT std_nand_3 a b c out
+*.PININFO a:I b:I c:I out:O
+MM5 net017 c gnd! gnd! NMOS_VTL W=440.0n L=50n m=1
+MM1 net19 b net017 gnd! NMOS_VTL W=440.0n L=50n m=1
+MM0 out a net19 gnd! NMOS_VTL W=440.0n L=50n m=1
+MM4 out c vdd! vdd! PMOS_VTL W=90n L=50n m=1
+MM3 out b vdd! vdd! PMOS_VTL W=90n L=50n m=1
+MM2 out a vdd! vdd! PMOS_VTL W=90n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: ECEC471_Lib
+* Cell Name:    std_d_flip_flop
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT std_d_flip_flop D Q Q' clk
+*.PININFO D:I clk:I Q:O Q':O
+XI7 net011 net13 net06 / std_nand_15
+XI8 net15 D net011 / std_nand_15
+XI5 Q net15 Q' / std_nand_15
+XI4 net13 Q' Q / std_nand_15
+XI1 net06 clk net13 / std_nand_15
+XI9 net13 clk net011 net15 / std_nand_3
+.ENDS
+

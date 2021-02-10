@@ -1,0 +1,38 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  ECEC472_Lib
+* Top Cell Name: gil_cell_mixer
+* View Name:     schematic
+* Netlisted on:  Feb  9 21:27:42 2021
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL vdd!
++        gnd!
+
+*.PIN vdd!
+*+    gnd!
+
+************************************************************************
+* Library Name: ECEC472_Lib
+* Cell Name:    gil_cell_mixer
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT gil_cell_mixer VIF_n VIF_p VLO_n VLO_p VRF_n VRF_p
+*.PININFO VLO_n:I VLO_p:I VRF_n:I VRF_p:I VIF_n:O VIF_p:O
+MM3 VIF_p VLO_p net15 gnd! NMOS_VTL W=90n L=50n m=1
+MM4 VIF_n VLO_p net8 gnd! NMOS_VTL W=90n L=50n m=1
+MM5 VIF_p VLO_n net8 gnd! NMOS_VTL W=90n L=50n m=1
+MM7 net15 VRF_n gnd! gnd! NMOS_VTL W=90n L=50n m=1
+MM6 net8 VRF_p gnd! gnd! NMOS_VTL W=90n L=50n m=1
+MM0 VIF_n VLO_n net15 gnd! NMOS_VTL W=90n L=50n m=1
+MM2 VIF_p gnd! vdd! vdd! PMOS_VTL W=90n L=50n m=1
+MM1 VIF_n gnd! vdd! vdd! PMOS_VTL W=90n L=50n m=1
+.ENDS
+

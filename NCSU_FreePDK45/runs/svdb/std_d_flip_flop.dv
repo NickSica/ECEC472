@@ -1,0 +1,6 @@
+# CALIBRE-LVS DISCREPANCY VIEWER TCL FILE 
+# FILE: svdb/std_d_flip_flop.dv
+dv_start matched                                  
+dv_cell {std_d_flip_flop} {std_d_flip_flop} matched
+dv_obj_count -transformed_nets {10 10} -transformed_inst {6 6} -transformed_port {6 6}
+dv_end

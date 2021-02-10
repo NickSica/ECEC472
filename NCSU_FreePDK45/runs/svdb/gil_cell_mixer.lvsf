@@ -1,0 +1,9 @@
+# Automagically generated file: Please do not edit!
+lvs_LvsOutFile RUNDIR /home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/runs
+lvs_LvsfVersion 2
+lvs_LvsInputSummary {0 0 0}
+lvs_LvsComparisonSummary {3 0 0 0}
+lvs_LvsOutFile LVS_REPORT gil_cell_mixer.lvs.report
+lvs_LvsOutFile SOURCE_NETLIST /home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/runs/gil_cell_mixer.src.net
+lvs_LvsOutFile RULES_FILE /home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/runs/_calibreLVS.rul_
+lvs_LvsRunTimes 1612924064 1612924064

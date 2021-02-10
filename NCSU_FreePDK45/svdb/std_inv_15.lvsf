@@ -1,0 +1,9 @@
+# Automagically generated file: Please do not edit!
+lvs_LvsOutFile RUNDIR /home/njs82@drexel.edu/NCSU_FreePDK45
+lvs_LvsfVersion 2
+lvs_LvsInputSummary {0 0 0}
+lvs_LvsComparisonSummary {3 0 0 0}
+lvs_LvsOutFile LVS_REPORT std_inv_15.lvs.report
+lvs_LvsOutFile SOURCE_NETLIST /home/njs82@drexel.edu/NCSU_FreePDK45/std_inv_15.src.net
+lvs_LvsOutFile RULES_FILE /home/njs82@drexel.edu/NCSU_FreePDK45/_calibreLVS.rul_
+lvs_LvsRunTimes 1602015645 1602015645

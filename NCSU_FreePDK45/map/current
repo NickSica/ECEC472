@@ -1,0 +1,31 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "std_inv_chain"
+  repList "auCdl schematic"
+  stopList "auCdl"
+  globalList "vdd! gnd!"
+  hierDelim "."
+  netlistDir "/home/njs82@drexel.edu/NCSU_FreePDK45"
+ )
+( instViewTable
+ )
+( net
+ )
+( inst
+ )
+( model
+( "ECEC471_Lib/std_inv_13.62x/schematic" "std_inv_13.62x" )
+( "ECEC471_Lib/std_inv_chain/schematic" "std_inv_chain" )
+( "ECEC471_Lib/std_inv_3.69x/schematic" "std_inv_3.69x" )
+( "ECEC471_Lib/std_inv_15/schematic" "std_inv_15" )
+ )
+( term
+ )
+( param
+ )
+( "std_inv_3.69x" "ihnl/cds0/map" )
+( "std_inv_chain" "ihnl/cds3/map" )
+( "std_inv_15" "ihnl/cds2/map" )
+( "std_inv_13.62x" "ihnl/cds1/map" )
+ )

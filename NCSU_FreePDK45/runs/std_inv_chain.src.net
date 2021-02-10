@@ -1,0 +1,69 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  ECEC471_Lib
+* Top Cell Name: std_inv_chain
+* View Name:     schematic
+* Netlisted on:  Nov  5 20:10:32 2020
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL gnd!
++        vdd!
+
+*.PIN gnd!
+*+    vdd!
+
+************************************************************************
+* Library Name: ECEC471_Lib
+* Cell Name:    std_inv_15
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT std_inv_15 in out
+*.PININFO in:I out:O
+MM0 out in gnd! gnd! NMOS_VTL W=90n L=50n m=1
+MM1 out in vdd! vdd! PMOS_VTL W=142.5n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: ECEC471_Lib
+* Cell Name:    std_inv_13_62x
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT std_inv_13_62x in out
+*.PININFO in:I out:O
+MM0 out in gnd! gnd! NMOS_VTL W=1.225u L=50n m=1
+MM1 out in vdd! vdd! PMOS_VTL W=1.94u L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: ECEC471_Lib
+* Cell Name:    std_inv_3_69x
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT std_inv_3_69x in out
+*.PININFO in:I out:O
+MM0 out in gnd! gnd! NMOS_VTL W=332.5n L=50n m=1
+MM1 out in vdd! vdd! PMOS_VTL W=525.00n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: ECEC471_Lib
+* Cell Name:    std_inv_chain
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT std_inv_chain in out
+*.PININFO in:I out:O
+XI11 in inv_1_out / std_inv_15
+XI13 inv_2_out out / std_inv_13_62x
+XI12 inv_1_out inv_2_out / std_inv_3_69x
+.ENDS
+

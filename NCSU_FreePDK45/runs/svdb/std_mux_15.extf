@@ -1,0 +1,9 @@
+# Automagically generated file: Please do not edit!
+lvs_ExtfVersion 3
+lvs_ExtRunTimes 1604456176 1604456176
+lvs_ExtOutFile RUNDIR /home/njs82@drexel.edu/ECEC471/NCSU_FreePDK45/runs
+lvs_ExtOutFile RULES_FILE /home/njs82@drexel.edu/ECEC471/NCSU_FreePDK45/runs/_calibreLVS.rul_
+lvs_ExtInfoExtSummary {0 0 0 0 0 0 0 0 0 0 0}
+lvs_ExtInfoDfmSummary {0}
+lvs_ExtOutFile LAYOUT_NETLIST /home/njs82@drexel.edu/ECEC471/NCSU_FreePDK45/runs/std_mux_15.sp
+lvs_ExtOutFile EXTRACTION_REPORT std_mux_15.lvs.report.ext

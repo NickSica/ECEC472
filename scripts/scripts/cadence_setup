@@ -1,0 +1,150 @@
+#!/bin/bash
+### Version 1.0 (02/24/2015) - Created by Kyle Juretus ###
+### Version 1.1 (10/30/2015) - Created by Kyle Juretus - Added CDS_LOAD_ENV###
+### Usage ###
+# Add sommething similar to your bashrc to source this script when running
+# alias run_virt='source /mnt/researchdata/scripts/IC616/cadence_setup'
+# then running the script would follow the following syntax
+# run_virt <PDK> <IC_Version> <MMSIM_Version>
+### Supported PDKs ###
+# IBM 180nm
+# IBM 130nm
+# Nangate 45nm PDK
+
+# Location of PDK setup scripts
+SCRIPT_DIR=/mnt/class_data/ecec571-f2015/scripts
+
+### Workspaces for available PDKs ###
+# The directories can be changed by personal perference 
+IBM_180_DIR=~/IBM_CMOS7RF
+IBM_130_DIR=~/IBM_CMOS8RF
+NANGATE_DIR=~/ECEC472/NCSU_FreePDK45
+IBM_180_SCRIPT=cmrf7sf_setup.sh
+IBM_130_SCRIPT=cmrf8sf_setup.sh
+NANGATE_SCRIPT=ncsu_setup.sh
+
+### Default settings for when script is run with no arguments ###
+DEFAULT_DIR=$NANGATE_DIR
+DEFAULT_SCRIPT=$NANGATE_SCRIPT
+
+# List available PDKs
+function print_options {
+	echo -e "\tValid PDK Options:"
+	echo -e "\t\tIBM_180 - IBMCMOS7RF 180nm PDK"
+	echo -e "\t\tIBM_130 - IBMCMOS8RF 130nm PDK"
+	echo -e "\t\tNangate - Nangate 45nm PDK"
+	echo -e "\tValid IC Versions:"
+	echo -e "\t\tIC616"
+	echo -e "\t\tIC615"
+	echo -e "\tCurrent Default Configuration"
+	echo -e "\t\tWorking Directory: $DEFAULT_DIR"
+	echo -e "\t\tScript Name: $DEFAULT_SCRIPT"
+}
+
+### Common Cadence Settings Across PDKs ###
+export CADENCEDIR=/opt/cadence
+
+# Insert Cadence version given to script
+if [ $# -ge 2 ]; then 
+	export CDSHOME=/opt/cadence/$2
+	export CDS=/opt/cadence/$2
+else
+	export CDSHOME=/opt/cadence/IC616
+	export CDS=/opt/cadence/IC616
+fi
+
+export PATH=${CDSHOME}/tools/bin:${CDSHOME}/tools/dfII/bin:${CDSHOME}/tools/dracula/bin:${CDSHOME}/tools/plot/bin:${CDSHOME}/tools/iccraft/bin:${PATH}
+
+export CDS_Netlisting_Mode=Analog
+export CDS_AUTO_64BIT=ALL
+
+# Assura
+export ASSURAHOME=/opt/cadence/ASSURA41
+export PATH=$PATH:$ASSURAHOME/bin:$ASSURAHOME/tools/bin
+# MMSIM
+export MMSIMHOME=/opt/cadence/MMSIM151
+export PATH=$MMSIMHOME/tools.lnx86/bin:$PATH
+### QRC PATH SETTINGS ###
+export QRC_HOME=/opt/cadence/PVE121
+export PATH=$QRC_HOME/bin:$QRC_HOME/tools/bin:$PATH
+
+### ENCOUNTER PATH SETTINGS ###
+export ENCOUNTERDIR=/opt/cadence/EDI120
+export PATH=$ENCOUNTERDIR/tools.lnx86/bin:$PATH
+
+### CALIBRE SETUP ###
+export CALIBRE_HOME=/opt/mentor/calibre/aoi_cal_2015.3_25.16
+export MGC_HOME=/opt/mentor/calibre/aoi_cal_2015.3_25.16
+export PATH=$PATH:$MGC_HOME/bin
+
+#export LM_LICENSE_FILE=1717@license1.ece.drexel.edu:27909@License01.coe.drexel.edu:5228@license04.coe.drexel.edu:7171@license03.coe.drexel.edu
+
+export LM_LICENSE_FILE=5228@license04.coe.drexel.edu:7171@license03.coe.drexel.edu
+
+# Settings for Unsupported OS (Set default case to RHEL50)
+if [ $# -ge 2 ] && [ $2 =  "IC615" ]; then
+	export OA_UNSUPPORTED_PLAT=linux_rhel40_gcc44x
+	export OA_HOME=/opt/cadence/IC616/oa_v22.43.042
+else
+	export OA_UNSUPPORTED_PLAT=linux_rhel50_gcc44x
+	export OA_HOME=/opt/cadence/IC616/oa_v22.43.053
+fi
+
+#### CDS ENV PATH (Search Local Directory) ###
+export CDS_LOAD_ENV=addCWD
+
+# Gets rid of warnings when starting virtuoso
+export W3264_NO_HOST_CHECK=1
+
+### QRC PATH SETTINGS ###
+export QRC_HOME=/opt/cadence/PVE121
+export PATH=$QRC_HOME/bin:$QRC_HOME/tools/bin:$PATH
+
+### ENCOUNTER PATH SETTINGS ###
+export ENCOUNTERDIR=/opt/cadence/EDI120
+export PATH=$ENCOUNTERDIR/tools.lnx86/bin:$PATH
+
+### END COMMON CADENCE SETTINGS ###
+
+
+
+### Function to start virtuoso based on input parameters ###
+# start_virtuoso <PDK_WORK_DIRECTORY> <PDK_SCRIPT>
+function start_virtuoso {
+	export VIRTUOSO_WORK_DIR=$1
+	if [ -f $SCRIPT_DIR/$2 ]; then
+		cd $VIRTUOSO_WORK_DIR
+		source $SCRIPT_DIR/$2
+		virtuoso &
+	else
+		echo "Invalid PDK setup script. 
+		Please ensure the script is in the setup script directory"
+		echo "Script Directory: $SCRIPT_DIR"
+	fi
+}
+
+### Check the PDK argument given ###
+if [ $# -ge 1 ]; then
+	### IBM_CMOS7RF 180nm Settings ###
+	# <PDK_SCRIPT> = cmrf7sf_setup.sh
+	# <VIRTUOSO_WORK_DIR> = ~/IBM_CMOS7RF
+	if [ $1 = "IBM_180" ]; then
+		start_virtuoso $IBM_180_DIR $IBM_180_SCRIPT
+	### IBM_CMOS7RF 130nm Settings ###
+	# <PDK_SCRIPT> = cmrf8sf_setup.sh
+	# <VIRTUOSO_WORK_DIR> = ~/IBM_CMOS8RF
+	elif [ $1 = "IBM_130" ]; then
+		start_virtuoso $IBM_130_DIR $IBM_130_SCRIPT
+	### IBM_CMOS7RF 130nm Settings ###
+	# <PDK_SCRIPT> = ncsu_setup.sh
+	# <VIRTUOSO_WORK_DIR> = ~/NCSU_FreePDK45
+	elif [ $1 = "Nangate" ]; then
+		start_virtuoso $NANGATE_DIR $NANGATE_SCRIPT
+	elif [ $1 = "-i" ]; then
+		echo "run_virt <PDK> <IC_Version>"
+		print_options
+	fi
+else
+	# If no PDK is given run default configuration
+	start_virtuoso $DEFAULT_DIR $DEFAULT_SCRIPT
+fi

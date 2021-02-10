@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      njs82
+HostName                       xunil-03.coe.drexel.edu
+ProcessIdentifier              23494
+ProcessCreationTime_UTC        1606170936
+ProcessCreationTime_Readable   Mon Nov 23 17:35:36 2020 EST
+AppIdentifier                  /opt/cadence/IC616/tools/dfII/bin/64bit/libManager
+OSType                         lnx86
+ReasonForPlacingEditLock       log file
+FilePathUsedToEditLock         /home/njs82@drexel.edu/ECEC471/NCSU_FreePDK45/libManager.log
+TimeEditLocked                 Mon Nov 23 17:35:36 2020 EST

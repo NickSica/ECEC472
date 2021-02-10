@@ -1,0 +1,441 @@
+; DESIGN "STD_INV_CHAIN"
+; DATE "Thu Nov  5 20:11:13 2020"
+; VENDOR "Mentor Graphics Corp."
+; PROGRAM "Calibre xRC v2015.3_25.16"
+; CIRCUIT TEMPERATURE 27C
+; NOMINAL TEMPERATURE 27C
+;
+
+
+mgc_rve_device_template "PMOS_VTL" "D" "G" "S" "b"
+mgc_rve_device_template "NMOS_VTL" "D" "G" "S" "b"
+mgc_rve_device_template "PMOS_VTH" "D" "G" "S" "b"
+mgc_rve_device_template "NMOS_VTH" "D" "G" "S" "b"
+mgc_rve_device_template "PMOS_VTG" "D" "G" "S" "b"
+mgc_rve_device_template "NMOS_VTG" "D" "G" "S" "b"
+mgc_rve_device_template "PMOS_THKOX" "D" "G" "S" "b"
+mgc_rve_device_template "NMOS_THKOX" "D" "G" "S" "b"
+mgc_rve_device_template "v" "P" "M"
+mgc_rve_device_template "f" "P" "M"
+mgc_rve_parasitic_template "c" "r" "l" "k" "h"
+
+mgc_rve_cell_start "std_inv_chain" "GND!" "VDD!" "IN" "OUT"
+mr_pi "NMOS_VTL" "I11/MM0" '( "I11/MM0_d" "I11/MM0_g" "I11/MM0_s" "I11/MM0_b") '( ("l" 5e-08) ("w" 9e-08) ("ad" 1.0125e-14) ("as" 1.0125e-14) ("pd" 4.05e-07) ("ps" 4.05e-07) ("lpe" 3) ) '(0.1675 -0.245)
+mr_pi "NMOS_VTL" "I12/MM0@2" '( "I12/MM0@2_d" "I12/MM0@2_g" "I12/MM0@2_s" "I12/MM0@2_b") '( ("l" 5e-08) ("w" 1.65e-07) ("ad" 2.31e-14) ("as" 2.76e-14) ("pd" 6.1e-07) ("ps" 7.1e-07) ("lpe" 3) ) '(0.58 -0.3275)
+mr_pi "NMOS_VTL" "I12/MM0" '( "I12/MM0_d" "I12/MM0_g" "I12/MM0_s" "I12/MM0_b") '( ("l" 5e-08) ("w" 1.65e-07) ("ad" 2.31e-14) ("as" 2.76e-14) ("pd" 6.1e-07) ("ps" 7.1e-07) ("lpe" 3) ) '(0.77 -0.3275)
+mr_pi "NMOS_VTL" "I13/MM0@2" '( "I13/MM0@2_d" "I13/MM0@2_g" "I13/MM0@2_s" "I13/MM0@2_b") '( ("l" 5e-08) ("w" 2.45e-07) ("ad" 3.43e-14) ("as" 3.0625e-14) ("pd" 7.7e-07) ("ps" 7.4e-07) ("lpe" 3) ) '(1.195 -0.4075)
+mr_pi "NMOS_VTL" "I13/MM0@3" '( "I13/MM0@3_d" "I13/MM0@3_g" "I13/MM0@3_s" "I13/MM0@3_b") '( ("l" 5e-08) ("w" 2.45e-07) ("ad" 3.43e-14) ("as" 3.43e-14) ("pd" 7.7e-07) ("ps" 7.7e-07) ("lpe" 3) ) '(1.385 -0.4075)
+mr_pi "NMOS_VTL" "I13/MM0@4" '( "I13/MM0@4_d" "I13/MM0@4_g" "I13/MM0@4_s" "I13/MM0@4_b") '( ("l" 5e-08) ("w" 2.45e-07) ("ad" 3.43e-14) ("as" 3.43e-14) ("pd" 7.7e-07) ("ps" 7.7e-07) ("lpe" 3) ) '(1.575 -0.4075)
+mr_pi "NMOS_VTL" "I13/MM0@5" '( "I13/MM0@5_d" "I13/MM0@5_g" "I13/MM0@5_s" "I13/MM0@5_b") '( ("l" 5e-08) ("w" 2.45e-07) ("ad" 3.43e-14) ("as" 3.43e-14) ("pd" 7.7e-07) ("ps" 7.7e-07) ("lpe" 3) ) '(1.765 -0.4075)
+mr_pi "NMOS_VTL" "I13/MM0" '( "I13/MM0_d" "I13/MM0_g" "I13/MM0_s" "I13/MM0_b") '( ("l" 5e-08) ("w" 2.45e-07) ("ad" 2.75625e-14) ("as" 3.43e-14) ("pd" 7.15e-07) ("ps" 7.7e-07) ("lpe" 3) ) '(1.955 -0.4075)
+mr_pi "PMOS_VTL" "I11/MM1" '( "I11/MM1_d" "I11/MM1_g" "I11/MM1_s" "I11/MM1_b") '( ("l" 5e-08) ("w" 1.425e-07) ("ad" 1.60312e-14) ("as" 1.60312e-14) ("pd" 5.1e-07) ("ps" 5.1e-07) ("lpe" 3) ) '(0.1675 0.1325)
+mr_pi "PMOS_VTL" "I12/MM1@2" '( "I12/MM1@2_d" "I12/MM1@2_g" "I12/MM1@2_s" "I12/MM1@2_b") '( ("l" 5e-08) ("w" 2.625e-07) ("ad" 3.675e-14) ("as" 3.675e-14) ("pd" 8.05e-07) ("ps" 8.05e-07) ("lpe" 3) ) '(0.58 0.1275)
+mr_pi "PMOS_VTL" "I12/MM1" '( "I12/MM1_d" "I12/MM1_g" "I12/MM1_s" "I12/MM1_b") '( ("l" 5e-08) ("w" 2.625e-07) ("ad" 3.675e-14) ("as" 2.95312e-14) ("pd" 8.05e-07) ("ps" 7.5e-07) ("lpe" 3) ) '(0.77 0.1275)
+mr_pi "PMOS_VTL" "I13/MM1@2" '( "I13/MM1@2_d" "I13/MM1@2_g" "I13/MM1@2_s" "I13/MM1@2_b") '( ("l" 5e-08) ("w" 3.875e-07) ("ad" 5.425e-14) ("as" 4.84375e-14) ("pd" 1.055e-06) ("ps" 1.025e-06) ("lpe" 3) ) '(1.195 0.1275)
+mr_pi "PMOS_VTL" "I13/MM1@3" '( "I13/MM1@3_d" "I13/MM1@3_g" "I13/MM1@3_s" "I13/MM1@3_b") '( ("l" 5e-08) ("w" 3.875e-07) ("ad" 5.425e-14) ("as" 5.425e-14) ("pd" 1.055e-06) ("ps" 1.055e-06) ("lpe" 3) ) '(1.385 0.1275)
+mr_pi "PMOS_VTL" "I13/MM1@4" '( "I13/MM1@4_d" "I13/MM1@4_g" "I13/MM1@4_s" "I13/MM1@4_b") '( ("l" 5e-08) ("w" 3.875e-07) ("ad" 5.425e-14) ("as" 5.425e-14) ("pd" 1.055e-06) ("ps" 1.055e-06) ("lpe" 3) ) '(1.575 0.1275)
+mr_pi "PMOS_VTL" "I13/MM1@5" '( "I13/MM1@5_d" "I13/MM1@5_g" "I13/MM1@5_s" "I13/MM1@5_b") '( ("l" 5e-08) ("w" 3.875e-07) ("ad" 5.425e-14) ("as" 5.425e-14) ("pd" 1.055e-06) ("ps" 1.055e-06) ("lpe" 3) ) '(1.765 0.1275)
+mr_pi "PMOS_VTL" "I13/MM1" '( "I13/MM1_d" "I13/MM1_g" "I13/MM1_s" "I13/MM1_b") '( ("l" 5e-08) ("w" 3.875e-07) ("ad" 4.35937e-14) ("as" 5.425e-14) ("pd" 1e-06) ("ps" 1.055e-06) ("lpe" 3) ) '(1.955 0.1275)
+
+mr_ni "GND!" 16.936 1.73956e-16 1.83079e-16 '( "I11/MM0_b" "I12/MM0@2_b" "I12/MM0_b" "I13/MM0@2_b" "I13/MM0@3_b" "I13/MM0@4_b" "I13/MM0@5_b" "I13/MM0_b" "I11/MM0_s" "I12/MM0@2_s" "I12/MM0_s" "I13/MM0@2_s" "I13/MM0@3_s" "I13/MM0@4_s" "I13/MM0@5_s" "I13/MM0_s" )
+mr_pp 'c "ciGND!_47" '("GND!_50" "0") 0.00258605f
+mr_pp 'c "ciGND!_48" '("GND!_47" "0") 0.00258605f
+mr_pp 'c "ciGND!_49" '("c_5_p" "0") 0.022779f
+mr_pp 'c "ciGND!_50" '("GND!_36" "0") 0.0108355f
+mr_pp 'c "ciGND!_51" '("c_4_p" "0") 0.0163781f
+mr_pp 'c "ciGND!_52" '("c_3_p" "0") 0.0184448f
+mr_pp 'c "ciGND!_53" '("GND!_17" "0") 0.0068432f
+mr_pp 'c "ciGND!_54" '("c_2_p" "0") 0.0158227f
+mr_pp 'c "ciGND!_55" '("GND!" "0") 0.0171619f
+mr_pp 'c "ciGND!_56" '("I13/MM0@5_s" "0") 0.0142518f
+mr_pp 'c "ciGND!_57" '("I13/MM0@3_s" "0") 0.0118581f
+mr_pp 'c "ciGND!_58" '("I13/MM0@2_s" "0") 0.0109215f
+mr_pp 'c "ciGND!_59" '("I12/MM0_s" "0") 0.0110938f
+mr_pp 'c "ciGND!_60" '("I12/MM0@2_s" "0") 0.0123939f
+mr_pp 'r "rGND!_61" '("GND!_48" "GND!_49") 0.562963
+mr_pp 'r "rGND!_62" '("GND!_42" "GND!_50") 0.0845374
+mr_pp 'r "rGND!_63" '("c_5_p" "GND!_43") 0.248039
+mr_pp 'r "rGND!_64" '("c_5_p" "GND!_42") 0.886667
+mr_pp 'r "rGND!_65" '("GND!_37" "GND!_50") 0.126671
+mr_pp 'r "rGND!_66" '("GND!_36" "GND!_49") 0.0914815
+mr_pp 'r "rGND!_67" '("c_4_p" "GND!_50") 0.0845374
+mr_pp 'r "rGND!_68" '("c_4_p" "GND!_36") 0.907778
+mr_pp 'r "rGND!_69" '("GND!_31" "GND!_49") 0.156557
+mr_pp 'r "rGND!_70" '("GND!_27" "GND!_48") 0.156557
+mr_pp 'r "rGND!_71" '("GND!_23" "GND!_47") 0.0845374
+mr_pp 'r "rGND!_72" '("c_3_p" "GND!_48") 0.0914815
+mr_pp 'r "rGND!_73" '("GND!_18" "GND!_47") 0.126671
+mr_pp 'r "rGND!_74" '("c_2_p" "GND!_47") 0.0845374
+mr_pp 'r "rGND!_75" '("c_2_p" "GND!_17") 0.900741
+mr_pp 'r "rGND!_76" '("GND!_10" "GND!_17") 0.248039
+mr_pp 'r "rGND!_77" '("GND!_10" "GND!") 0.833077
+mr_pp 'r "rGND!_78" '("I11/MM0_b" "c_3_p") 0.30963
+mr_pp 'r "rGND!_79" '("I11/MM0_b" "GND!_23") 0.717778
+mr_pp 'r "rGND!_80" '("I13/MM0@5_s" "GND!_43") 1.84446
+mr_pp 'r "rGND!_81" '("I13/MM0@3_s" "GND!_37") 1.84446
+mr_pp 'r "rGND!_82" '("I13/MM0@2_s" "GND!_31") 1.84446
+mr_pp 'r "rGND!_83" '("I12/MM0_s" "GND!_27") 1.84446
+mr_pp 'r "rGND!_84" '("I12/MM0@2_s" "GND!_18") 1.84446
+mr_pp 'r "rGND!_85" '("I11/MM0_s" "GND!") 1.01138
+mr_pp 'r "rGND!_86" '("I13/MM0@4_s" "I13/MM0@3_s") 0.01
+mr_pp 'r "rGND!_87" '("I13/MM0_s" "I13/MM0@5_s") 0.01
+mr_pp 'r "rGND!_88" '("I13/MM0_b" "I11/MM0_b") 0.01
+mr_pp 'r "rGND!_89" '("I13/MM0@5_b" "I11/MM0_b") 0.01
+mr_pp 'r "rGND!_90" '("I13/MM0@4_b" "I11/MM0_b") 0.01
+mr_pp 'r "rGND!_91" '("I13/MM0@3_b" "I11/MM0_b") 0.01
+mr_pp 'r "rGND!_92" '("I13/MM0@2_b" "I11/MM0_b") 0.01
+mr_pp 'r "rGND!_93" '("I12/MM0_b" "I11/MM0_b") 0.01
+mr_pp 'r "rGND!_94" '("I12/MM0@2_b" "I11/MM0_b") 0.01
+
+
+mr_ni "VDD!" 17.3056 2.01621e-16 1.96279e-16 '( "I11/MM1_b" "I12/MM1@2_b" "I12/MM1_b" "I13/MM1@2_b" "I13/MM1@3_b" "I13/MM1@4_b" "I13/MM1@5_b" "I13/MM1_b" "I11/MM1_s" "I12/MM1@2_s" "I12/MM1_s" "I13/MM1@2_s" "I13/MM1@3_s" "I13/MM1@4_s" "I13/MM1@5_s" "I13/MM1_s" )
+mr_pp 'c "ciVDD!_48" '("VDD!_52" "0") 0.00261728f
+mr_pp 'c "ciVDD!_49" '("VDD!_51" "0") 0.00261728f
+mr_pp 'c "ciVDD!_50" '("VDD!_50" "0") 0.00261728f
+mr_pp 'c "ciVDD!_51" '("VDD!_49" "0") 0.00261728f
+mr_pp 'c "ciVDD!_52" '("c_52_n" "0") 0.0229444f
+mr_pp 'c "ciVDD!_53" '("c_51_n" "0") 0.016672f
+mr_pp 'c "ciVDD!_54" '("c_85_p" "0") 0.00723385f
+mr_pp 'c "ciVDD!_55" '("c_50_n" "0") 0.0171775f
+mr_pp 'c "ciVDD!_56" '("VDD!_17" "0") 0.00686805f
+mr_pp 'c "ciVDD!_57" '("c_49_n" "0") 0.0160589f
+mr_pp 'c "ciVDD!_58" '("I13/MM1@5_s" "0") 0.0198146f
+mr_pp 'c "ciVDD!_59" '("I13/MM1@3_s" "0") 0.0160687f
+mr_pp 'c "ciVDD!_60" '("I13/MM1@2_s" "0") 0.0150081f
+mr_pp 'c "ciVDD!_61" '("I12/MM1_s" "0") 0.0149827f
+mr_pp 'c "ciVDD!_62" '("I12/MM1@2_s" "0") 0.0165214f
+mr_pp 'c "ciVDD!_63" '("I11/MM1_s" "0") 0.0218019f
+mr_pp 'r "rVDD!_64" '("VDD!_44" "VDD!_52") 0.0845374
+mr_pp 'r "rVDD!_65" '("c_52_n" "VDD!_45") 0.248039
+mr_pp 'r "rVDD!_66" '("c_52_n" "VDD!_44") 0.886667
+mr_pp 'r "rVDD!_67" '("VDD!_39" "VDD!_52") 0.126671
+mr_pp 'r "rVDD!_68" '("VDD!_38" "VDD!_51") 0.0845374
+mr_pp 'r "rVDD!_69" '("c_51_n" "VDD!_52") 0.0845374
+mr_pp 'r "rVDD!_70" '("c_51_n" "VDD!_38") 0.914815
+mr_pp 'r "rVDD!_71" '("VDD!_33" "VDD!_51") 0.126671
+mr_pp 'r "rVDD!_72" '("VDD!_32" "VDD!_50") 0.0845374
+mr_pp 'r "rVDD!_73" '("c_85_p" "VDD!_51") 0.0845374
+mr_pp 'r "rVDD!_74" '("c_85_p" "VDD!_32") 0.457407
+mr_pp 'r "rVDD!_75" '("VDD!_27" "VDD!_50") 0.126671
+mr_pp 'r "rVDD!_76" '("VDD!_23" "VDD!_49") 0.0845374
+mr_pp 'r "rVDD!_77" '("c_50_n" "VDD!_50") 0.0845374
+mr_pp 'r "rVDD!_78" '("VDD!_18" "VDD!_49") 0.126671
+mr_pp 'r "rVDD!_79" '("c_49_n" "VDD!_49") 0.0845374
+mr_pp 'r "rVDD!_80" '("c_49_n" "VDD!_17") 0.900741
+mr_pp 'r "rVDD!_81" '("VDD!_10" "VDD!_17") 0.248039
+mr_pp 'r "rVDD!_82" '("VDD!_10" "VDD!") 0.76
+mr_pp 'r "rVDD!_83" '("I11/MM1_b" "c_50_n") 0.253333
+mr_pp 'r "rVDD!_84" '("I11/MM1_b" "VDD!_23") 0.696667
+mr_pp 'r "rVDD!_85" '("I13/MM1@5_s" "VDD!_45") 1.81231
+mr_pp 'r "rVDD!_86" '("I13/MM1@3_s" "VDD!_39") 1.81231
+mr_pp 'r "rVDD!_87" '("I13/MM1@2_s" "VDD!_33") 1.81231
+mr_pp 'r "rVDD!_88" '("I12/MM1_s" "VDD!_27") 1.81231
+mr_pp 'r "rVDD!_89" '("I12/MM1@2_s" "VDD!_18") 1.81231
+mr_pp 'r "rVDD!_90" '("I11/MM1_s" "VDD!") 1.69538
+mr_pp 'r "rVDD!_91" '("I13/MM1@4_s" "I13/MM1@3_s") 0.01
+mr_pp 'r "rVDD!_92" '("I13/MM1_s" "I13/MM1@5_s") 0.01
+mr_pp 'r "rVDD!_93" '("I13/MM1_b" "I11/MM1_b") 0.01
+mr_pp 'r "rVDD!_94" '("I13/MM1@5_b" "I11/MM1_b") 0.01
+mr_pp 'r "rVDD!_95" '("I13/MM1@4_b" "I11/MM1_b") 0.01
+mr_pp 'r "rVDD!_96" '("I13/MM1@3_b" "I11/MM1_b") 0.01
+mr_pp 'r "rVDD!_97" '("I13/MM1@2_b" "I11/MM1_b") 0.01
+mr_pp 'r "rVDD!_98" '("I12/MM1_b" "I11/MM1_b") 0.01
+mr_pp 'r "rVDD!_99" '("I12/MM1@2_b" "I11/MM1_b") 0.01
+
+
+mr_ni "IN" 151.077 5.68746e-17 4.61401e-17 '( "I11/MM0_g" "I11/MM1_g" )
+mr_pp 'c "ciIN_14" '("c_100_n" "0") 0.0096244f
+mr_pp 'c "ciIN_15" '("IN" "0") 0.00443611f
+mr_pp 'c "ciIN_16" '("I11/MM1_g" "0") 0.0224906f
+mr_pp 'c "ciIN_17" '("I11/MM0_g" "0") 0.0203235f
+mr_pp 'r "rIN_18" '("IN_13" "c_100_n") 6.5
+mr_pp 'r "rIN_19" '("IN" "IN_13") 89.3538
+mr_pp 'r "rIN_20" '("IN_5" "c_100_n") 1.98872
+mr_pp 'r "rIN_21" '("IN_5" "I11/MM1_g") 25.896
+mr_pp 'r "rIN_22" '("IN_1" "c_100_n") 1.98872
+mr_pp 'r "rIN_23" '("IN_1" "I11/MM0_g") 25.35
+
+
+mr_ni "INV_1_OUT" 273.838 1.28982e-16 1.40961e-16 '( "I11/MM0_d" "I11/MM1_d" "I12/MM0@2_g" "I12/MM0_g" "I12/MM1@2_g" "I12/MM1_g" )
+mr_pp 'c "ciINV_1_OUT_39" '("c_119_n" "0") 0.00446932f
+mr_pp 'c "ciINV_1_OUT_40" '("c_133_n" "0") 0.00100808f
+mr_pp 'c "ciINV_1_OUT_41" '("c_117_n" "0") 0.00729683f
+mr_pp 'c "ciINV_1_OUT_42" '("I11/MM1_d" "0") 0.00966455f
+mr_pp 'c "ciINV_1_OUT_43" '("I11/MM0_d" "0") 0.00829961f
+mr_pp 'c "ciINV_1_OUT_44" '("c_144_p" "0") 0.00133515f
+mr_pp 'c "ciINV_1_OUT_45" '("I12/MM1_g" "0") 0.0236945f
+mr_pp 'c "ciINV_1_OUT_46" '("I12/MM0_g" "0") 0.0203691f
+mr_pp 'c "ciINV_1_OUT_47" '("c_146_p" "0") 0.00661753f
+mr_pp 'c "ciINV_1_OUT_48" '("c_141_p" "0") 0.00325868f
+mr_pp 'c "ciINV_1_OUT_49" '("I12/MM1@2_g" "0") 0.0231469f
+mr_pp 'c "ciINV_1_OUT_50" '("I12/MM0@2_g" "0") 0.0198216f
+mr_pp 'r "rINV_1_OUT_51" '("INV_1_OUT_35" "INV_1_OUT") 6.5
+mr_pp 'r "rINV_1_OUT_52" '("c_119_n" "INV_1_OUT_35") 89.3538
+mr_pp 'r "rINV_1_OUT_53" '("INV_1_OUT_31" "c_133_n") 0.0418175
+mr_pp 'r "rINV_1_OUT_54" '("c_117_n" "c_119_n") 0.0223169
+mr_pp 'r "rINV_1_OUT_55" '("c_117_n" "INV_1_OUT_31") 1.12538
+mr_pp 'r "rINV_1_OUT_56" '("INV_1_OUT_26" "c_133_n") 0.160909
+mr_pp 'r "rINV_1_OUT_57" '("INV_1_OUT_22" "c_133_n") 0.160909
+mr_pp 'r "rINV_1_OUT_58" '("I11/MM1_d" "INV_1_OUT_26") 1.15462
+mr_pp 'r "rINV_1_OUT_59" '("I11/MM0_d" "INV_1_OUT_22") 0.976308
+mr_pp 'r "rINV_1_OUT_60" '("INV_1_OUT_15" "c_144_p") 3.30287
+mr_pp 'r "rINV_1_OUT_61" '("INV_1_OUT_15" "I12/MM1_g") 36.426
+mr_pp 'r "rINV_1_OUT_62" '("INV_1_OUT_11" "c_144_p") 3.30287
+mr_pp 'r "rINV_1_OUT_63" '("INV_1_OUT_11" "I12/MM0_g") 34.32
+mr_pp 'r "rINV_1_OUT_64" '("c_146_p" "INV_1_OUT") 3.4687
+mr_pp 'r "rINV_1_OUT_65" '("c_141_p" "c_144_p") 0.858359
+mr_pp 'r "rINV_1_OUT_66" '("c_141_p" "c_146_p") 21.84
+mr_pp 'r "rINV_1_OUT_67" '("INV_1_OUT_5" "INV_1_OUT") 1.98872
+mr_pp 'r "rINV_1_OUT_68" '("INV_1_OUT_5" "I12/MM1@2_g") 34.476
+mr_pp 'r "rINV_1_OUT_69" '("INV_1_OUT_1" "INV_1_OUT") 1.98872
+mr_pp 'r "rINV_1_OUT_70" '("INV_1_OUT_1" "I12/MM0@2_g") 32.37
+
+
+mr_ni "INV_2_OUT" 678.511 2.75293e-16 2.31175e-16 '( "I12/MM0@2_d" "I12/MM0_d" "I12/MM1@2_d" "I12/MM1_d" "I13/MM0@2_g" "I13/MM0@3_g" "I13/MM0@4_g" "I13/MM0@5_g" "I13/MM0_g" "I13/MM1@2_g" "I13/MM1@3_g" "I13/MM1@4_g" "I13/MM1@5_g" "I13/MM1_g" )
+mr_pp 'c "ciINV_2_OUT_85" '("c_166_n" "0") 0.00358249f
+mr_pp 'c "ciINV_2_OUT_86" '("c_197_n" "0") 1.61968e-19
+mr_pp 'c "ciINV_2_OUT_87" '("c_163_n" "0") 0.0141752f
+mr_pp 'c "ciINV_2_OUT_88" '("I12/MM1@2_d" "0") 0.00940069f
+mr_pp 'c "ciINV_2_OUT_89" '("I12/MM0@2_d" "0") 0.00882492f
+mr_pp 'c "ciINV_2_OUT_90" '("c_230_p" "0") 0.0013194f
+mr_pp 'c "ciINV_2_OUT_91" '("c_229_p" "0") 4.48018e-19
+mr_pp 'c "ciINV_2_OUT_92" '("c_222_p" "0") 4.48018e-19
+mr_pp 'c "ciINV_2_OUT_93" '("c_221_p" "0") 4.48018e-19
+mr_pp 'c "ciINV_2_OUT_94" '("I13/MM1_g" "0") 0.0303452f
+mr_pp 'c "ciINV_2_OUT_95" '("I13/MM0_g" "0") 0.0246256f
+mr_pp 'c "ciINV_2_OUT_96" '("c_158_n" "0") 0.00314973f
+mr_pp 'c "ciINV_2_OUT_97" '("I13/MM1@5_g" "0") 0.0201602f
+mr_pp 'c "ciINV_2_OUT_98" '("I13/MM0@5_g" "0") 0.0164866f
+mr_pp 'c "ciINV_2_OUT_99" '("c_220_p" "0") 0.00325868f
+mr_pp 'c "ciINV_2_OUT_100" '("I13/MM1@4_g" "0") 0.0201602f
+mr_pp 'c "ciINV_2_OUT_101" '("I13/MM0@4_g" "0") 0.0164866f
+mr_pp 'c "ciINV_2_OUT_102" '("c_153_n" "0") 0.00314973f
+mr_pp 'c "ciINV_2_OUT_103" '("I13/MM1@3_g" "0") 0.0201602f
+mr_pp 'c "ciINV_2_OUT_104" '("I13/MM0@3_g" "0") 0.0164866f
+mr_pp 'c "ciINV_2_OUT_105" '("c_232_p" "0") 0.00572582f
+mr_pp 'c "ciINV_2_OUT_106" '("c_214_p" "0") 0.00325868f
+mr_pp 'c "ciINV_2_OUT_107" '("I13/MM1@2_g" "0") 0.029375f
+mr_pp 'c "ciINV_2_OUT_108" '("I13/MM0@2_g" "0") 0.0236554f
+mr_pp 'r "rINV_2_OUT_109" '("INV_2_OUT_68" "INV_2_OUT") 4.94
+mr_pp 'r "rINV_2_OUT_110" '("c_166_n" "INV_2_OUT_68") 89.3538
+mr_pp 'r "rINV_2_OUT_111" '("INV_2_OUT_64" "c_197_n") 0.0418175
+mr_pp 'r "rINV_2_OUT_112" '("c_163_n" "c_166_n") 0.0223169
+mr_pp 'r "rINV_2_OUT_113" '("c_163_n" "INV_2_OUT_64") 2.38231
+mr_pp 'r "rINV_2_OUT_114" '("INV_2_OUT_59" "c_197_n") 0.160909
+mr_pp 'r "rINV_2_OUT_115" '("INV_2_OUT_55" "c_197_n") 0.160909
+mr_pp 'r "rINV_2_OUT_116" '("I12/MM1@2_d" "INV_2_OUT_59") 1.35923
+mr_pp 'r "rINV_2_OUT_117" '("I12/MM0@2_d" "INV_2_OUT_55") 1.23938
+mr_pp 'r "rINV_2_OUT_118" '("INV_2_OUT_45" "c_230_p") 3.30287
+mr_pp 'r "rINV_2_OUT_119" '("INV_2_OUT_45" "I13/MM1_g") 46.176
+mr_pp 'r "rINV_2_OUT_120" '("INV_2_OUT_41" "c_230_p") 3.30287
+mr_pp 'r "rINV_2_OUT_121" '("INV_2_OUT_41" "I13/MM0_g") 40.56
+mr_pp 'r "rINV_2_OUT_122" '("INV_2_OUT_40" "c_229_p") 3.9
+mr_pp 'r "rINV_2_OUT_123" '("c_158_n" "c_230_p") 0.858359
+mr_pp 'r "rINV_2_OUT_124" '("c_158_n" "INV_2_OUT_40") 21.84
+mr_pp 'r "rINV_2_OUT_125" '("INV_2_OUT_35" "c_229_p") 3.9
+mr_pp 'r "rINV_2_OUT_126" '("INV_2_OUT_35" "I13/MM1@5_g") 46.176
+mr_pp 'r "rINV_2_OUT_127" '("INV_2_OUT_31" "c_229_p") 3.9
+mr_pp 'r "rINV_2_OUT_128" '("INV_2_OUT_31" "I13/MM0@5_g") 40.56
+mr_pp 'r "rINV_2_OUT_129" '("INV_2_OUT_30" "c_222_p") 3.9
+mr_pp 'r "rINV_2_OUT_130" '("c_220_p" "c_229_p") 3.9
+mr_pp 'r "rINV_2_OUT_131" '("c_220_p" "INV_2_OUT_30") 21.84
+mr_pp 'r "rINV_2_OUT_132" '("INV_2_OUT_25" "c_222_p") 3.9
+mr_pp 'r "rINV_2_OUT_133" '("INV_2_OUT_25" "I13/MM1@4_g") 46.176
+mr_pp 'r "rINV_2_OUT_134" '("INV_2_OUT_21" "c_222_p") 3.9
+mr_pp 'r "rINV_2_OUT_135" '("INV_2_OUT_21" "I13/MM0@4_g") 40.56
+mr_pp 'r "rINV_2_OUT_136" '("INV_2_OUT_20" "c_221_p") 3.9
+mr_pp 'r "rINV_2_OUT_137" '("c_153_n" "c_222_p") 3.9
+mr_pp 'r "rINV_2_OUT_138" '("c_153_n" "INV_2_OUT_20") 21.84
+mr_pp 'r "rINV_2_OUT_139" '("INV_2_OUT_15" "c_221_p") 3.9
+mr_pp 'r "rINV_2_OUT_140" '("INV_2_OUT_15" "I13/MM1@3_g") 46.176
+mr_pp 'r "rINV_2_OUT_141" '("INV_2_OUT_11" "c_221_p") 3.9
+mr_pp 'r "rINV_2_OUT_142" '("INV_2_OUT_11" "I13/MM0@3_g") 40.56
+mr_pp 'r "rINV_2_OUT_143" '("c_232_p" "INV_2_OUT") 3.4687
+mr_pp 'r "rINV_2_OUT_144" '("c_214_p" "c_221_p") 3.9
+mr_pp 'r "rINV_2_OUT_145" '("c_214_p" "c_232_p") 21.84
+mr_pp 'r "rINV_2_OUT_146" '("INV_2_OUT_5" "INV_2_OUT") 1.98872
+mr_pp 'r "rINV_2_OUT_147" '("INV_2_OUT_5" "I13/MM1@2_g") 44.226
+mr_pp 'r "rINV_2_OUT_148" '("INV_2_OUT_1" "INV_2_OUT") 1.98872
+mr_pp 'r "rINV_2_OUT_149" '("INV_2_OUT_1" "I13/MM0@2_g") 38.61
+mr_pp 'r "rINV_2_OUT_150" '("I12/MM0_d" "I12/MM0@2_d") 0.01
+mr_pp 'r "rINV_2_OUT_151" '("I12/MM1_d" "I12/MM1@2_d") 0.01
+
+
+mr_ni "OUT" 12.9516 7.48609e-17 2.32389e-16 '( "I13/MM0@2_d" "I13/MM0@3_d" "I13/MM0@4_d" "I13/MM0@5_d" "I13/MM0_d" "I13/MM1@2_d" "I13/MM1@3_d" "I13/MM1@4_d" "I13/MM1@5_d" "I13/MM1_d" )
+mr_pp 'c "ciOUT_51" '("OUT" "0") 0.00204713f
+mr_pp 'c "ciOUT_52" '("c_282_n" "0") 1.74889e-19
+mr_pp 'c "ciOUT_53" '("c_242_n" "0") 0.00511036f
+mr_pp 'c "ciOUT_54" '("c_241_n" "0") 0.00511036f
+mr_pp 'c "ciOUT_55" '("I13/MM1_d" "0") 0.0141482f
+mr_pp 'c "ciOUT_56" '("I13/MM1@4_d" "0") 0.0089867f
+mr_pp 'c "ciOUT_57" '("I13/MM1@2_d" "0") 0.00915937f
+mr_pp 'c "ciOUT_58" '("I13/MM0_d" "0") 0.0133396f
+mr_pp 'c "ciOUT_59" '("I13/MM0@4_d" "0") 0.00831297f
+mr_pp 'c "ciOUT_60" '("I13/MM0@2_d" "0") 0.00847132f
+mr_pp 'r "rOUT_61" '("OUT_31" "OUT") 0.160909
+mr_pp 'r "rOUT_62" '("OUT_27" "OUT") 0.160909
+mr_pp 'r "rOUT_63" '("OUT_26" "c_284_n") 0.19
+mr_pp 'r "rOUT_64" '("c_242_n" "OUT") 0.0418175
+mr_pp 'r "rOUT_65" '("c_242_n" "OUT_26") 1.82692
+mr_pp 'r "rOUT_66" '("OUT_21" "c_284_n") 0.19
+mr_pp 'r "rOUT_67" '("OUT_17" "c_284_n") 0.19
+mr_pp 'r "rOUT_68" '("OUT_16" "c_282_n") 0.0418175
+mr_pp 'r "rOUT_69" '("c_241_n" "c_284_n") 0.19
+mr_pp 'r "rOUT_70" '("c_241_n" "OUT_16") 1.84154
+mr_pp 'r "rOUT_71" '("OUT_11" "c_282_n") 0.160909
+mr_pp 'r "rOUT_72" '("OUT_7" "c_282_n") 0.160909
+mr_pp 'r "rOUT_73" '("I13/MM1_d" "OUT_31") 1.35923
+mr_pp 'r "rOUT_74" '("I13/MM1@4_d" "OUT_21") 1.35923
+mr_pp 'r "rOUT_75" '("I13/MM1@2_d" "OUT_11") 1.35923
+mr_pp 'r "rOUT_76" '("I13/MM0_d" "OUT_27") 1.23938
+mr_pp 'r "rOUT_77" '("I13/MM0@4_d" "OUT_17") 1.23938
+mr_pp 'r "rOUT_78" '("I13/MM0@2_d" "OUT_7") 1.23938
+mr_pp 'r "rOUT_79" '("I13/MM0@3_d" "I13/MM0@2_d") 0.01
+mr_pp 'r "rOUT_80" '("I13/MM0@5_d" "I13/MM0@4_d") 0.01
+mr_pp 'r "rOUT_81" '("I13/MM1@3_d" "I13/MM1@2_d") 0.01
+mr_pp 'r "rOUT_82" '("I13/MM1@5_d" "I13/MM1@4_d") 0.01
+
+mr_pp 'c "cc_1" '("GND!" "I11/MM1_s") 9.83958e-19
+mr_pp 'c "cc_2" '("c_2_p" "c_49_n") 2.13861e-19
+mr_pp 'c "cc_3" '("c_3_p" "c_50_n") 3.30513e-19
+mr_pp 'c "cc_4" '("c_4_p" "c_51_n") 4.95769e-19
+mr_pp 'c "cc_5" '("c_5_p" "c_52_n") 4.56885e-19
+mr_pp 'c "cc_6" '("I12/MM0@2_s" "I11/MM0_g") 3.91803e-19
+mr_pp 'c "cc_7" '("GND!" "I11/MM0_g") 0.00290012f
+mr_pp 'c "cc_8" '("c_2_p" "I11/MM0_g") 3.62865e-19
+mr_pp 'c "cc_9" '("GND!" "IN") 0.0074956f
+mr_pp 'c "cc_10" '("GND!" "c_100_n") 2.36852e-19
+mr_pp 'c "cc_11" '("I12/MM0@2_s" "I12/MM0@2_g") 0.0041042f
+mr_pp 'c "cc_12" '("c_3_p" "I12/MM0@2_g") 0.00115702f
+mr_pp 'c "cc_13" '("I12/MM0_s" "I12/MM0_g") 0.0041042f
+mr_pp 'c "cc_14" '("c_3_p" "I12/MM0_g") 9.64723e-19
+mr_pp 'c "cc_15" '("I12/MM0@2_s" "I11/MM0_d") 0.00766377f
+mr_pp 'c "cc_16" '("GND!" "I11/MM0_d") 0.00899139f
+mr_pp 'c "cc_17" '("c_2_p" "I11/MM0_d") 0.00230588f
+mr_pp 'c "cc_18" '("I12/MM0@2_s" "c_117_n") 0.00627026f
+mr_pp 'c "cc_19" '("c_2_p" "c_117_n") 8.35358e-19
+mr_pp 'c "cc_20" '("I12/MM0@2_s" "c_119_n") 0.0016062f
+mr_pp 'c "cc_21" '("I13/MM0@2_s" "I13/MM0@2_g") 0.00581495f
+mr_pp 'c "cc_22" '("c_4_p" "I13/MM0@2_g") 0.00106946f
+mr_pp 'c "cc_23" '("I13/MM0@3_s" "I13/MM0@3_g") 0.00178943f
+mr_pp 'c "cc_24" '("c_4_p" "I13/MM0@3_g") 6.58128e-19
+mr_pp 'c "cc_25" '("I13/MM0@3_s" "c_153_n") 2.48556e-19
+mr_pp 'c "cc_26" '("I13/MM0@3_s" "I13/MM0@4_g") 0.00174814f
+mr_pp 'c "cc_27" '("c_5_p" "I13/MM0@4_g") 8.3531e-19
+mr_pp 'c "cc_28" '("I13/MM0@5_s" "I13/MM0@5_g") 0.00177569f
+mr_pp 'c "cc_29" '("c_5_p" "I13/MM0@5_g") 6.58128e-19
+mr_pp 'c "cc_30" '("I13/MM0@5_s" "c_158_n") 2.48556e-19
+mr_pp 'c "cc_31" '("I13/MM0@5_s" "I13/MM0_g") 0.00338303f
+mr_pp 'c "cc_32" '("I12/MM0@2_s" "I12/MM0@2_d") 0.00886869f
+mr_pp 'c "cc_33" '("I12/MM0_s" "I12/MM0@2_d") 0.00886869f
+mr_pp 'c "cc_34" '("c_3_p" "I12/MM0@2_d") 0.00303935f
+mr_pp 'c "cc_35" '("I12/MM0_s" "c_163_n") 0.00714822f
+mr_pp 'c "cc_36" '("I13/MM0@2_s" "c_163_n") 0.00627026f
+mr_pp 'c "cc_37" '("c_3_p" "c_163_n") 8.89387e-19
+mr_pp 'c "cc_38" '("I13/MM0@2_s" "c_166_n") 0.0016062f
+mr_pp 'c "cc_39" '("I13/MM0@2_s" "I13/MM0@2_d") 0.0102184f
+mr_pp 'c "cc_40" '("I13/MM0@3_s" "I13/MM0@2_d") 0.0116567f
+mr_pp 'c "cc_41" '("c_4_p" "I13/MM0@2_d") 0.00303935f
+mr_pp 'c "cc_42" '("I13/MM0@3_s" "I13/MM0@4_d") 0.0110401f
+mr_pp 'c "cc_43" '("I13/MM0@5_s" "I13/MM0@4_d") 0.0116567f
+mr_pp 'c "cc_44" '("c_5_p" "I13/MM0@4_d") 0.00303935f
+mr_pp 'c "cc_45" '("I13/MM0@5_s" "I13/MM0_d") 0.0113409f
+mr_pp 'c "cc_46" '("I13/MM0@3_s" "c_241_n") 0.00714821f
+mr_pp 'c "cc_47" '("I13/MM0@5_s" "c_242_n") 0.00714821f
+mr_pp 'c "cc_48" '("I11/MM1_s" "I11/MM1_g") 0.00290012f
+mr_pp 'c "cc_49" '("I12/MM1@2_s" "I11/MM1_g") 4.19553e-19
+mr_pp 'c "cc_50" '("c_49_n" "I11/MM1_g") 2.55884e-19
+mr_pp 'c "cc_51" '("I11/MM1_s" "IN") 0.004513f
+mr_pp 'c "cc_52" '("I11/MM1_s" "c_100_n") 2.16362e-19
+mr_pp 'c "cc_53" '("I12/MM1@2_s" "I12/MM1@2_g") 0.00518595f
+mr_pp 'c "cc_54" '("c_50_n" "I12/MM1@2_g") 8.92324e-19
+mr_pp 'c "cc_55" '("I12/MM1_s" "I12/MM1_g") 0.00567575f
+mr_pp 'c "cc_56" '("c_50_n" "I12/MM1_g") 3.29068e-19
+mr_pp 'c "cc_57" '("I11/MM1_s" "I11/MM1_d") 0.00899139f
+mr_pp 'c "cc_58" '("I12/MM1@2_s" "I11/MM1_d") 0.00936683f
+mr_pp 'c "cc_59" '("c_49_n" "I11/MM1_d") 0.00147346f
+mr_pp 'c "cc_60" '("I12/MM1@2_s" "c_117_n") 0.00647057f
+mr_pp 'c "cc_61" '("c_49_n" "c_117_n") 6.10113e-19
+mr_pp 'c "cc_62" '("I12/MM1@2_s" "c_119_n") 0.00165388f
+mr_pp 'c "cc_63" '("I13/MM1@2_s" "I13/MM1@2_g") 0.00784313f
+mr_pp 'c "cc_64" '("c_51_n" "I13/MM1@2_g") 9.62892e-19
+mr_pp 'c "cc_65" '("I13/MM1@3_s" "I13/MM1@3_g") 0.0024784f
+mr_pp 'c "cc_66" '("c_51_n" "I13/MM1@3_g") 6.78521e-19
+mr_pp 'c "cc_67" '("I13/MM1@3_s" "c_153_n") 2.5422e-19
+mr_pp 'c "cc_68" '("I13/MM1@3_s" "I13/MM1@4_g") 0.00244941f
+mr_pp 'c "cc_69" '("c_52_n" "I13/MM1@4_g") 6.66618e-19
+mr_pp 'c "cc_70" '("I13/MM1@5_s" "I13/MM1@5_g") 0.00244941f
+mr_pp 'c "cc_71" '("c_52_n" "I13/MM1@5_g") 6.78521e-19
+mr_pp 'c "cc_72" '("I13/MM1@5_s" "c_158_n") 2.5422e-19
+mr_pp 'c "cc_73" '("I13/MM1@5_s" "I13/MM1_g") 0.00509565f
+mr_pp 'c "cc_74" '("I12/MM1@2_s" "I12/MM1@2_d") 0.0098541f
+mr_pp 'c "cc_75" '("I12/MM1_s" "I12/MM1@2_d") 0.0129519f
+mr_pp 'c "cc_76" '("c_50_n" "I12/MM1@2_d") 0.00170892f
+mr_pp 'c "cc_77" '("I12/MM1_s" "c_163_n") 0.00737465f
+mr_pp 'c "cc_78" '("I13/MM1@2_s" "c_163_n") 0.00647057f
+mr_pp 'c "cc_79" '("c_50_n" "c_163_n") 4.5921e-19
+mr_pp 'c "cc_80" '("c_85_p" "c_163_n") 2.84201e-19
+mr_pp 'c "cc_81" '("I13/MM1@2_s" "c_166_n") 0.00165388f
+mr_pp 'c "cc_82" '("I13/MM1@2_s" "I13/MM1@2_d") 0.0113537f
+mr_pp 'c "cc_83" '("I13/MM1@3_s" "I13/MM1@2_d") 0.012601f
+mr_pp 'c "cc_84" '("c_51_n" "I13/MM1@2_d") 0.00170892f
+mr_pp 'c "cc_85" '("I13/MM1@3_s" "I13/MM1@4_d") 0.012601f
+mr_pp 'c "cc_86" '("I13/MM1@5_s" "I13/MM1@4_d") 0.012601f
+mr_pp 'c "cc_87" '("c_52_n" "I13/MM1@4_d") 0.00170892f
+mr_pp 'c "cc_88" '("I13/MM1@5_s" "I13/MM1_d") 0.0129519f
+mr_pp 'c "cc_89" '("I13/MM1@3_s" "c_241_n") 0.00737465f
+mr_pp 'c "cc_90" '("I13/MM1@5_s" "c_242_n") 0.00737465f
+mr_pp 'c "cc_91" '("I11/MM0_g" "I11/MM0_d") 0.00410691f
+mr_pp 'c "cc_92" '("IN" "I11/MM0_d") 0.0141272f
+mr_pp 'c "cc_93" '("I11/MM1_g" "I11/MM1_d") 0.00410691f
+mr_pp 'c "cc_94" '("c_100_n" "c_133_n") 0.00410691f
+mr_pp 'c "cc_95" '("I12/MM0@2_g" "I12/MM0@2_d") 7.38599e-19
+mr_pp 'c "cc_96" '("I12/MM0_g" "I12/MM0@2_d") 0.00172499f
+mr_pp 'c "cc_97" '("I11/MM0_d" "I12/MM0@2_d") 0.00107149f
+mr_pp 'c "cc_98" '("c_119_n" "I12/MM0@2_d") 0.016105f
+mr_pp 'c "cc_99" '("I12/MM1@2_g" "I12/MM1@2_d") 7.84799e-19
+mr_pp 'c "cc_100" '("I12/MM1_g" "I12/MM1@2_d") 0.00173345f
+mr_pp 'c "cc_101" '("I11/MM1_d" "I12/MM1@2_d") 0.00107149f
+mr_pp 'c "cc_102" '("c_141_p" "c_163_n") 4.90489e-19
+mr_pp 'c "cc_103" '("I12/MM0_g" "c_163_n") 0.00177521f
+mr_pp 'c "cc_104" '("I12/MM1_g" "c_163_n") 0.00197678f
+mr_pp 'c "cc_105" '("c_144_p" "c_163_n") 0.00176325f
+mr_pp 'c "cc_106" '("c_141_p" "c_197_n") 0.00458095f
+mr_pp 'c "cc_107" '("c_146_p" "c_197_n") 0.0015234f
+mr_pp 'c "cc_108" '("I12/MM0_g" "c_166_n") 2.60668e-19
+mr_pp 'c "cc_109" '("I12/MM1_g" "c_166_n") 2.60668e-19
+mr_pp 'c "cc_110" '("I13/MM0@2_g" "I13/MM0@2_d") 7.83243e-19
+mr_pp 'c "cc_111" '("I13/MM0@3_g" "I13/MM0@2_d") 0.00144256f
+mr_pp 'c "cc_112" '("I12/MM0@2_d" "I13/MM0@2_d") 6.06976e-19
+mr_pp 'c "cc_113" '("c_166_n" "I13/MM0@2_d") 0.0226788f
+mr_pp 'c "cc_114" '("I13/MM0@4_g" "I13/MM0@4_d") 0.00145647f
+mr_pp 'c "cc_115" '("I13/MM0@5_g" "I13/MM0@4_d") 0.00143944f
+mr_pp 'c "cc_116" '("I13/MM0_g" "I13/MM0_d") 0.00514782f
+mr_pp 'c "cc_117" '("I13/MM1@2_g" "I13/MM1@2_d") 8.2717e-19
+mr_pp 'c "cc_118" '("I13/MM1@3_g" "I13/MM1@2_d") 0.0015343f
+mr_pp 'c "cc_119" '("I12/MM1@2_d" "I13/MM1@2_d") 6.06976e-19
+mr_pp 'c "cc_120" '("I13/MM1@4_g" "I13/MM1@4_d") 0.0015343f
+mr_pp 'c "cc_121" '("I13/MM1@5_g" "I13/MM1@4_d") 0.00153118f
+mr_pp 'c "cc_122" '("I13/MM1_g" "I13/MM1_d") 0.00548895f
+mr_pp 'c "cc_123" '("c_214_p" "c_241_n") 4.90489e-19
+mr_pp 'c "cc_124" '("I13/MM0@3_g" "c_241_n") 0.0010708f
+mr_pp 'c "cc_125" '("I13/MM1@3_g" "c_241_n") 0.00107841f
+mr_pp 'c "cc_126" '("c_153_n" "c_241_n") 0.00371119f
+mr_pp 'c "cc_127" '("I13/MM0@4_g" "c_241_n") 0.00108417f
+mr_pp 'c "cc_128" '("I13/MM1@4_g" "c_241_n") 0.00109178f
+mr_pp 'c "cc_129" '("c_220_p" "c_241_n") 4.90489e-19
+mr_pp 'c "cc_130" '("c_221_p" "c_241_n") 6.71902e-19
+mr_pp 'c "cc_131" '("c_222_p" "c_241_n") 6.71902e-19
+mr_pp 'c "cc_132" '("c_220_p" "c_242_n") 4.90489e-19
+mr_pp 'c "cc_133" '("I13/MM0@5_g" "c_242_n") 0.00108417f
+mr_pp 'c "cc_134" '("I13/MM1@5_g" "c_242_n") 0.00109178f
+mr_pp 'c "cc_135" '("c_158_n" "c_242_n") 0.00371119f
+mr_pp 'c "cc_136" '("I13/MM0_g" "c_242_n") 0.00105253f
+mr_pp 'c "cc_137" '("I13/MM1_g" "c_242_n") 0.00105929f
+mr_pp 'c "cc_138" '("c_229_p" "c_242_n") 6.71902e-19
+mr_pp 'c "cc_139" '("c_230_p" "c_242_n") 0.00176001f
+mr_pp 'c "cc_140" '("c_214_p" "c_282_n") 0.00458004f
+mr_pp 'c "cc_141" '("c_232_p" "c_282_n") 0.00161041f
+mr_pp 'c "cc_142" '("c_220_p" "c_284_n") 0.00327445f
+mgc_rve_cell_end
+

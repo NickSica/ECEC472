@@ -1,0 +1,64 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version 6.1.6-64b 09/01/2015 22:59 (sjfnl132) $
+          : sub-version  IC6.1.6-64b.500.13.2 
+Started at: 05-Nov-2020  17:02:01
+User Name : njs82
+Host Name : xunil-03.coe.drexel.edu
+Directory : /home/njs82@drexel.edu/ECEC471/NCSU_FreePDK45
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+WARNING (XSTRM-20): Output Stream file '/home/njs82@drexel.edu/ECEC471/NCSU_FreePDK45/runs/std_inv_3_69x.calibre.db' already exists. It will be overwritten.
+INFO (XSTRM-288): The automatic layer mapping is done by StreamOut and the xStrmOut_layerMap.txt file is generated. This is because either the layer mapping is not provided or the XST_AUTO_LM value is used with the -layerMap option.
+INFO (XSTRM-162): You have not used the viaMap option. If the OpenAccess design has native oaVia instances, use the -viaMap option for preserving oaVia instances in a Stream Out - Stream In round trip. Using the -viaMap option improves performance and VM usage of applications using the Streamed-In design.  For details on the viaMap option, refer to the "Design Data Translator's Reference" guide for XStream.
+
+Summary of Options :
+library                                 ECEC471_Lib
+strmFile                                /home/njs82@drexel.edu/ECEC471/NCSU_FreePDK45/runs/std_inv_3_69x.calibre.db
+topCell                                 std_inv_3_69x
+view                                    layout
+runDir                                  /home/njs82@drexel.edu/ECEC471/NCSU_FreePDK45/runs/
+logFile                                 PIPO.LOG.std_inv_3_69x
+summaryFile                             PIPO.SUM.std_inv_3_69x
+case                                    Preserve
+convertDot                              node
+
+INFO (XSTRM-223): 1. Translating cellView NCSU_TechLib_FreePDK45/M1_POLY/layout as STRUCTURE M1_POLY_CDNS_604613721450
+INFO (XSTRM-223): 2. Translating cellView NCSU_TechLib_FreePDK45/M1_N/layout as STRUCTURE M1_N_CDNS_604613721451
+INFO (XSTRM-223): 3. Translating cellView NCSU_TechLib_FreePDK45/M1_P/layout as STRUCTURE M1_P_CDNS_604613721452
+INFO (XSTRM-223): 4. Translating cellView NCSU_TechLib_FreePDK45/M1_N/layout as STRUCTURE M1_N_CDNS_604613721453
+INFO (XSTRM-223): 5. Translating cellView NCSU_TechLib_FreePDK45/M1_N/layout as STRUCTURE M1_N_CDNS_604613721454
+INFO (XSTRM-223): 6. Translating cellView NCSU_TechLib_FreePDK45/M1_P/layout as STRUCTURE M1_P_CDNS_604613721455
+INFO (XSTRM-223): 7. Translating cellView NCSU_TechLib_FreePDK45/M1_P/layout as STRUCTURE M1_P_CDNS_604613721456
+INFO (XSTRM-223): 8. Translating cellView ECEC471_Lib/std_inv_3_69x/layout as STRUCTURE std_inv_3_69x
+INFO (XSTRM-180): You have not used the objectMap option. The design has instance(s) of at least one of following OpenAccess objects: oaBlockage, oaBoundary, oaRow, and oaMarker. Any information about these objects will not be translated into the generated stream file. Use the objectMap option to translate/preserve these objects using XStream. For details on the objectMap option, refer to the "Design Data Translator's Reference" guide for XStream.
+
+Summary of Objects Translated:
+	Scalar Instances:                       0
+	Array Instances:                        0
+	Polygons:                               0
+	Paths:                                  0
+	Rectangles:                             55
+	Lines:                                  0
+	Arcs:                                   0
+	Donuts:                                 0
+	Dots:                                   0
+	Ellipses:                               0
+	Boundaries:                             0
+	Area Blockages:                         0
+	Layer Blockages:                        0
+	Area Halos:                             0
+	Markers:                                0
+	Rows:                                   0
+	Standard Vias                           9
+	Custom Vias:                            0
+	CdsGen Vias:                            0
+	Pathsegs:                               0
+	Text:                                   4
+	TextDisplay:                            0
+	Cells:                                  8
+
+Elapsed Time: 0.3s   User Time: 0.2s   CPU Time: 0.1s   Peak VM: 1868KB
+INFO (XSTRM-234): Translation completed. '0' error(s) and '1' warning(s) found.

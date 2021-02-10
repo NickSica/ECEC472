@@ -1,0 +1,6 @@
+# CALIBRE-LVS DISCREPANCY VIEWER TCL FILE 
+# FILE: svdb/std_inv_13_62x.dv
+dv_start matched                                  
+dv_cell {std_inv_13_62x} {std_inv_13_62x} matched
+dv_obj_count -transformed_nets {4 4} -transformed_inst {1 1} -transformed_port {4 4}
+dv_end

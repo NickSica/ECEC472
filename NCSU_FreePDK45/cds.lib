@@ -1,0 +1,13 @@
+DEFINE analogLib $CDSHOME/tools/dfII/etc/cdslib/artist/analogLib
+DEFINE US_8ths   $CDSHOME/tools/dfII/etc/cdslib/sheets/US_8ths
+DEFINE basic     $CDSHOME/tools/dfII/etc/cdslib/basic
+DEFINE cdsDefTechLib $CDSHOME/tools/dfII/etc/cdsDefTechLib
+DEFINE NCSU_TechLib_FreePDK45  $PDK_DIR/ncsu_basekit/lib/NCSU_TechLib_FreePDK45
+DEFINE NCSU_Devices_FreePDK45  $PDK_DIR/ncsu_basekit/lib/NCSU_Devices_FreePDK45
+DEFINE NangateOpenCellLibrary   $NANGATE/Back_End/virtuoso/NangateOpenCellLibrary
+DEFINE LowPowerOpenCellLibrary  $NANGATE/Low_Power/Back_End/virtuoso/LowPowerOpenCellLibrary
+DEFINE OSU_TechLib_FreePDK45  $PDK_DIR/osu_soc/lib/freepdk45_cells
+
+DEFINE avTech /opt/cadence/ASSURA41/tools/assura/etc/avtech/avTech
+DEFINE ECEC471_Lib /home/njs82@drexel.edu/ECEC471/NCSU_FreePDK45/ECEC471_Lib
+DEFINE ECEC472_Lib /home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/ECEC472_Lib

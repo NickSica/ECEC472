@@ -1,0 +1,27 @@
+*pexRulesFile: $PDK_DIR/ncsu_basekit/techfile/calibre/calibrexRC.rul
+*pexRunDir: /home/njs82@drexel.edu/ECEC471/NCSU_FreePDK45/runs
+*pexLayoutPaths: std_inv_chain.calibre.db
+*pexLayoutPrimary: std_inv_chain
+*pexLayoutLibrary: ECEC471_Lib
+*pexLayoutView: layout
+*pexLayoutGetFromViewer: 1
+*pexSourcePath: std_inv_chain.src.net
+*pexSourcePrimary: std_inv_chain
+*pexSourceLibrary: ECEC471_Lib
+*pexSourceView: schematic
+*pexPexGroundNameValue: gnd!
+*pexReportFile: std_inv_chain.lvs.report
+*pexPexNetlistFile: std_inv_chain.pex.netlist
+*pexPexNetlistFormat: CALIBREVIEW
+*pexPexReportFile: std_inv_chain.pex.report
+*cmnShowOptions: 1
+*cmnUsePrecision: 1
+*cmnPrecision: 2000
+*cmnUseCBforRVE: 0
+*cmnRunHier: 2
+*cmnSlaveHosts: {use {}} {hostName {}} {cpuCount {}} {a32a64 {}} {rsh {}} {maxMem {}} {workingDir {}} {layerDir {}} {mgcLibPath {}} {launchName {}}
+*cmnLSFSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnGridSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnFDILayoutLibrary: ECEC471_Lib
+*cmnFDILayoutView: layout
+*cmnFDIDEFLayoutPath: std_inv_chain.def

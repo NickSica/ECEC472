@@ -1,0 +1,61 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version 6.1.6-64b 09/01/2015 22:59 (sjfnl132) $
+          : sub-version  IC6.1.6-64b.500.13.2 
+Started at: 09-Feb-2021  16:41:02
+User Name : njs82
+Host Name : xunil-03.coe.drexel.edu
+Directory : /home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+WARNING (XSTRM-20): Output Stream file '/home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/runs/mixer.calibre.db' already exists. It will be overwritten.
+INFO (XSTRM-288): The automatic layer mapping is done by StreamOut and the xStrmOut_layerMap.txt file is generated. This is because either the layer mapping is not provided or the XST_AUTO_LM value is used with the -layerMap option.
+INFO (XSTRM-162): You have not used the viaMap option. If the OpenAccess design has native oaVia instances, use the -viaMap option for preserving oaVia instances in a Stream Out - Stream In round trip. Using the -viaMap option improves performance and VM usage of applications using the Streamed-In design.  For details on the viaMap option, refer to the "Design Data Translator's Reference" guide for XStream.
+
+Summary of Options :
+library                                 ECEC472_Lib
+strmFile                                /home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/runs/mixer.calibre.db
+topCell                                 mixer
+view                                    layout
+runDir                                  /home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/runs/
+logFile                                 PIPO.LOG.mixer
+summaryFile                             PIPO.SUM.mixer
+case                                    Preserve
+convertDot                              node
+
+INFO (XSTRM-223): 1. Translating cellView NCSU_TechLib_FreePDK45/M1_POLY/layout as STRUCTURE M1_POLY_CDNS_612906862770
+INFO (XSTRM-223): 2. Translating cellView NCSU_TechLib_FreePDK45/M2_M1/layout as STRUCTURE M2_M1_CDNS_612906862771
+INFO (XSTRM-223): 3. Translating cellView NCSU_TechLib_FreePDK45/M1_P/layout as STRUCTURE M1_P_CDNS_612906862772
+INFO (XSTRM-223): 4. Translating cellView NCSU_TechLib_FreePDK45/M1_N/layout as STRUCTURE M1_N_CDNS_612906862773
+INFO (XSTRM-223): 5. Translating cellView ECEC472_Lib/mixer/layout as STRUCTURE mixer
+INFO (XSTRM-180): You have not used the objectMap option. The design has instance(s) of at least one of following OpenAccess objects: oaBlockage, oaBoundary, oaRow, and oaMarker. Any information about these objects will not be translated into the generated stream file. Use the objectMap option to translate/preserve these objects using XStream. For details on the objectMap option, refer to the "Design Data Translator's Reference" guide for XStream.
+
+Summary of Objects Translated:
+	Scalar Instances:                       0
+	Array Instances:                        0
+	Polygons:                               0
+	Paths:                                  0
+	Rectangles:                             44
+	Lines:                                  0
+	Arcs:                                   0
+	Donuts:                                 0
+	Dots:                                   0
+	Ellipses:                               0
+	Boundaries:                             0
+	Area Blockages:                         0
+	Layer Blockages:                        0
+	Area Halos:                             0
+	Markers:                                0
+	Rows:                                   0
+	Standard Vias                           14
+	Custom Vias:                            0
+	CdsGen Vias:                            0
+	Pathsegs:                               0
+	Text:                                   0
+	TextDisplay:                            6
+	Cells:                                  5
+
+Elapsed Time: 0.4s   User Time: 0.2s   CPU Time: 0.1s   Peak VM: 1868KB
+INFO (XSTRM-234): Translation completed. '0' error(s) and '1' warning(s) found.

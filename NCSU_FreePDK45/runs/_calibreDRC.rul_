@@ -1,0 +1,27 @@
+//
+//  Rule file generated on Tue Feb 09 21:21:07 EST 2021
+//     by Calibre Interactive - DRC (v2015.3_25.16)
+//
+//      *** PLEASE DO NOT MODIFY THIS FILE ***
+//
+//
+
+LAYOUT PATH  "gil_cell_mixer.calibre.db"
+LAYOUT PRIMARY "gil_cell_mixer"
+LAYOUT SYSTEM GDSII
+
+DRC RESULTS DATABASE "gil_cell_mixer.drc.results" ASCII 
+DRC MAXIMUM RESULTS 1000
+DRC MAXIMUM VERTEX 4096
+
+DRC CELL NAME YES CELL SPACE XFORM
+DRC SUMMARY REPORT "gil_cell_mixer.drc.summary" REPLACE HIER
+
+VIRTUAL CONNECT COLON NO
+VIRTUAL CONNECT REPORT NO
+
+DRC ICSTATION YES
+
+
+INCLUDE "/mnt/class_data/ecec571-f2015/PDKs/NCSU_FreePDK45/ncsu_basekit/techfile/calibre/calibreDRC.rul"
+

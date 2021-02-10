@@ -1,0 +1,11 @@
+# CALIBRE-LVS DISCREPANCY VIEWER TCL FILE 
+# FILE: svdb/mixer.dv
+dv_start unmatched                                
+dv_cell {mixer} {mixer} unmatched
+dv_obj_count -transformed_nets {5 6} -transformed_inst {4 4} -transformed_port {5 6}
+dv_discrep 1 {Incorrect Nets} -inst_count { 9 9}
+dv_discrep_line {Net } -lnet {GND!} {                                                  } -snet {GND!} {}
+dv_discrep_line {                                                          } -snet {VDD!} {}
+dv_discrep_line {--- 9 Connections On This Net ---                         --- 9 Connections On This Net ---}
+dv_discrep_line {}
+dv_end

@@ -1,0 +1,9 @@
+# Automagically generated file: Please do not edit!
+lvs_ExtfVersion 3
+lvs_ExtRunTimes 1612924063 1612924064
+lvs_ExtOutFile RUNDIR /home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/runs
+lvs_ExtOutFile RULES_FILE /home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/runs/_calibreLVS.rul_
+lvs_ExtInfoExtSummary {0 0 0 0 0 0 0 0 0 0 0}
+lvs_ExtInfoDfmSummary {0}
+lvs_ExtOutFile LAYOUT_NETLIST /home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/runs/gil_cell_mixer.sp
+lvs_ExtOutFile EXTRACTION_REPORT gil_cell_mixer.lvs.report.ext

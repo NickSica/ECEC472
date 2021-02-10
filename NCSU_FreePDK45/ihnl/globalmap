@@ -1,0 +1,13 @@
+CADENCE IHNL01070
+$model
+ECEC471_Lib/std_inv_chain/schematic std_inv_chain
+ECEC471_Lib/std_inv_3.69x/schematic std_inv_3.69x
+ECEC471_Lib/std_inv_15/schematic std_inv_15
+ECEC471_Lib/std_inv_13.62x/schematic std_inv_13.62x
+$endmodel
+$net
+gnd! gnd!
+vdd! vdd!
+$endnet
+$param
+$endparam

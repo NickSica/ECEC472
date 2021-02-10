@@ -1,0 +1,30 @@
+
+
+       #############################################################
+       ##                                                         ##
+       ##               C A L I B R E    S Y S T E M              ##
+       ##                                                         ##
+       ##    C I R C U I T   E X T R A C T I O N   R E P O R T    ##
+       ##                                                         ##
+       #############################################################
+
+
+REPORT FILE NAME:         mixer.lvs.report.ext
+LAYOUT NAME:              mixer.calibre.db ('mixer')
+CREATION TIME:            Tue Feb  9 16:41:05 2021
+CURRENT DIRECTORY:        /home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/runs
+USER NAME:                njs82
+CALIBRE VERSION:          v2015.3_25.16    Tue Sep 1 14:37:32 PDT 2015
+
+
+
+Extraction Errors and Warnings for cell "mixer"
+-----------------------------------------------
+
+WARNING:  Short circuit - Different names on one net:
+          Net Id:  5
+          (1)  name  "gnd!"  at location  (0.58,-0.83)  on layer  11 "metal1"
+          (2)  name  "vdd!"  at location  (0.57,-0.0925)  on layer  11 "metal1"
+          The name "gnd!" was assigned to the net.
+
+

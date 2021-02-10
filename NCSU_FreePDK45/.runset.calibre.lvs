@@ -1,0 +1,27 @@
+*lvsRulesFile: $PDK_DIR/ncsu_basekit/techfile/calibre/calibreLVS.rul
+*lvsRunDir: /home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/runs
+*lvsLayoutPaths: gil_cell_mixer.calibre.db
+*lvsLayoutPrimary: gil_cell_mixer
+*lvsLayoutLibrary: ECEC472_Lib
+*lvsLayoutView: layout
+*lvsLayoutGetFromViewer: 1
+*lvsSourcePath: gil_cell_mixer.src.net
+*lvsSourcePrimary: gil_cell_mixer
+*lvsSourceLibrary: ECEC472_Lib
+*lvsSourceView: schematic
+*lvsSourceGetFromViewer: 1
+*lvsSpiceFile: gil_cell_mixer.sp
+*lvsERCDatabase: gil_cell_mixer.erc.results
+*lvsERCSummaryFile: gil_cell_mixer.erc.summary
+*lvsReportFile: gil_cell_mixer.lvs.report
+*cmnWarnLayoutOverwrite: 0
+*cmnWarnSourceOverwrite: 0
+*cmnShowOptions: 1
+*cmnUsePrecision: 1
+*cmnPrecision: 2000
+*cmnSlaveHosts: {use {}} {hostName {}} {cpuCount {}} {a32a64 {}} {rsh {}} {maxMem {}} {workingDir {}} {layerDir {}} {mgcLibPath {}} {launchName {}}
+*cmnLSFSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnGridSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnFDILayoutLibrary: ECEC472_Lib
+*cmnFDILayoutView: layout
+*cmnFDIDEFLayoutPath: gil_cell_mixer.def

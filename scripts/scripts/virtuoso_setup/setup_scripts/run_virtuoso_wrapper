@@ -1,0 +1,38 @@
+#!/bin/bash
+SCRIPT_DIR="/mnt/researchdata/scripts/virtuoso_setup/setup_scripts"
+
+#Run python script to setup/check PDK settings
+python "$SCRIPT_DIR"/run_virtuoso.py "$@"
+#Get ENV vars and PDK SCRIPT
+SCRIPT_OUT=$(python $SCRIPT_DIR/get_pdk_vars.py $@)
+
+OUTPUT_TEXT=${SCRIPT_OUT%%\{env*}
+VARS=${SCRIPT_OUT#*\{env\}}
+ENV_VARS=${VARS%%\{pdk_script*}
+PDK_SCRIPT=${VARS#*\{pdk_script\}}
+
+### Print output from Python script ###
+while IFS=$'\n' read -r line
+do
+    echo "$line"
+done <<< "$OUTPUT_TEXT"
+
+#Function to start Virtuoso
+#start_virtuoso <pdk_script>
+function start_virtuoso {
+    if [ -f $1 ]; then
+        cd $VIRTUOSO_WORK_DIR
+        source $1
+        virtuoso &
+    else
+        echo "Invalid PDK setup script.
+        Please ensure the script is in the setup script directory"
+    fi
+}
+
+if [ "$VARS" != "$OUTPUT_TEXT" ]; then
+    export $ENV_VARS
+    #Source Common Cadence Settings
+    source $SCRIPT_DIR/virtuoso_settings
+    start_virtuoso $PDK_SCRIPT
+fi

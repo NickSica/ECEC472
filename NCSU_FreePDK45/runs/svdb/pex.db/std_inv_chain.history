@@ -1,0 +1,8 @@
+//OK 
+//NUMBER_OF_HEADER_LINES: 6
+//VERSION: 1
+//TOKEN_DELIMITER: "
+//TOKEN_SEPARATOR: " "
+//FORMAT: "time" "calibre version" "command line"
+"Thu Nov  5 20:11:10 2020 " "v2015.3_25.16" "-xrc -pdb -rcc -turbo 1 /home/njs82@drexel.edu/ECEC471/NCSU_FreePDK45/runs/_calibrexRC.rul_"
+"Thu Nov  5 20:11:13 2020 " "v2015.3_25.16" "-xrc -fmt -all /home/njs82@drexel.edu/ECEC471/NCSU_FreePDK45/runs/_calibrexRC.rul_"

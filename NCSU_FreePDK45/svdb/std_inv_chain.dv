@@ -1,0 +1,6 @@
+# CALIBRE-LVS DISCREPANCY VIEWER TCL FILE 
+# FILE: svdb/std_inv_chain.dv
+dv_start matched                                  
+dv_cell {std_inv_chain} {std_inv_chain} matched
+dv_obj_count -transformed_nets {6 6} -transformed_inst {6 6} -transformed_port {4 4}
+dv_end

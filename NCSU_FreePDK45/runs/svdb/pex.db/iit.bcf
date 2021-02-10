@@ -1,0 +1,5 @@
+# Automagically generated file: Please do not edit!
+pex_PexParam RUNDIR /home/njs82@drexel.edu/ECEC471/NCSU_FreePDK45/runs
+pex_PexParam PEXDIR svdb/pex.db
+pex_PexParam SVDBDIR svdb
+pex_PexParam LAYOUT_PRIMARY std_inv_chain

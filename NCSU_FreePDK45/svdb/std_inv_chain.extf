@@ -1,0 +1,10 @@
+# Automagically generated file: Please do not edit!
+lvs_ExtfVersion 3
+lvs_ExtRunTimes 1604437475 1604437477
+lvs_ExtOutFile RUNDIR /home/njs82@drexel.edu/NCSU_FreePDK45
+lvs_ExtOutFile RULES_FILE /home/njs82@drexel.edu/NCSU_FreePDK45/_calibrexRC.rul_
+lvs_ExtInfoExtSummary {0 0 0 0 0 0 0 0 0 0 0}
+lvs_ExtInfoDfmSummary {0}
+lvs_ExtOutFile LAYOUT_NETLIST /home/njs82@drexel.edu/NCSU_FreePDK45/svdb/std_inv_chain.sp
+lvs_ExtOutFile EXTRACTION_REPORT std_inv_chain.lvs.report.ext
+lvs_ExtOutFile LAYOUT_PDSP {  svdb/std_inv_chain.pdsp }

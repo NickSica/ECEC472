@@ -1,0 +1,12 @@
+layout	xSnapSpacing	float	0.0025
+layout	ySnapSpacing	float	0.0025
+
+;;##added by Ying for Calibre LVS schematic netlist extraction##
+license VSELicenseCheckoutOrder    string "XL,L"
+;;##added by Kyle Juretus for license use##
+license VLSLicenseCheckoutOrder    string "GXL,XL,L"
+license VLSL_UseNextLicense string "always"
+license VLSXL_UseNextLicense string "always"
+license ADELicenseCheckoutOrder    string "XL,GXL,L"
+license ADEL_UseNextLicense string "always"
+license ADEXL_UseNextLicense string "always"
