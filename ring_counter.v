@@ -1,4 +1,4 @@
-module ring_counter #(int C_NUM_CYCLES = 255) (
+module ring_counter #(parameter C_NUM_CYCLES = 255) (
 	input  CK,
 	input  RST,
 	output Q);
@@ -12,7 +12,7 @@ module ring_counter #(int C_NUM_CYCLES = 255) (
 	         dffrs_out[0],);
 
 	genvar i;
-	for(i = 1; i < C_NUM_CYCLES; i += 1) begin : g_dffrs
+	for(i = 1; i < C_NUM_CYCLES; i = i + 1) begin : g_dffrs
 		DFFRS_X2(dffrs_out[i],
   	         RST,
 	           1'b1,

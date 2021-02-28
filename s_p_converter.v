@@ -1,4 +1,4 @@
-module s_p_converter #(int C_BITS_OUT = 255) (
+module s_p_converter #(parameter C_BITS_OUT=255) (
 	input CK,
 	input RST,
 	input D,
@@ -10,7 +10,7 @@ module s_p_converter #(int C_BITS_OUT = 255) (
 	assign dff_out[0] = D;
 
 	genvar i;
-	for(i = 0; i < C_BITS_OUT; i += 1) begin : g_dff
+	for(i = 0; i < C_BITS_OUT; i = i + 1) begin : g_dff
 		DFF_X2(dff_out[i],
 		       CK,
 		       dff_out[i + 1],);
@@ -20,7 +20,7 @@ module s_p_converter #(int C_BITS_OUT = 255) (
 		       Q[i]);
 	end
 
-	ring_counter #(C_BITS_OUT) (
+	ring_counter #(C_NUM_CYCLES = C_BITS_OUT) (
 	  CK,
 	  RST,
 	  en);
