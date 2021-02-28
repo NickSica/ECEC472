@@ -1,4 +1,4 @@
-module s_p_converter #(parameter C_BITS_OUT=255) (
+module s_p_converter #(parameter C_BITS_OUT = 255) (
 	input CK,
 	input RST,
 	input D,
@@ -20,7 +20,7 @@ module s_p_converter #(parameter C_BITS_OUT=255) (
 		       Q[i]);
 	end
 
-	ring_counter #(C_NUM_CYCLES = C_BITS_OUT) (
+	ring_counter #(C_BITS_OUT) (
 	  CK,
 	  RST,
 	  en);
