@@ -1,6 +1,6 @@
 module ring_counter #(int C_NUM_CYCLES) (
-	input  CK;
-	input  RST;
+	input  CK,
+	input  RST,
 	output Q);
 
 	wire [C_NUM_CYCLES:0] dffrs_out;
@@ -13,7 +13,7 @@ module ring_counter #(int C_NUM_CYCLES) (
 	         .QN());
 
 	genvar i;
-	for(i = 1; i < C_NUM_CYCLES; ++i) begin : g_dffrs
+	for(i = 1; i < C_NUM_CYCLES; i++) begin : g_dffrs
 		DFFRS_X2(.D(dffrs_out[i]),
   	         .RN(RST),
 	           .SN(1'b1),
@@ -22,5 +22,6 @@ module ring_counter #(int C_NUM_CYCLES) (
 	           .QN());
 	end
 
-	Q <= dffrs_out[C_NUM_CYCLES];
-endmodule ring_counter;
+	assign Q = dffrs_out[C_NUM_CYCLES];
+
+endmodule ring_counter
