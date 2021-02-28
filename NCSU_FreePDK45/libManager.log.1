@@ -1,6 +1,6 @@
 \o Program:		@(#)$CDS: libManager version 6.1.6 - CAT33 07/09/2015 16:04 (sjfnl733) $
 \o Sub version:		sub-version  s018 
-\o Arguments:		-mpssession virtuoso27014 -mpshost xunil-03.coe.drexel.edu 
+\o Arguments:		-mpssession virtuoso3267 -mpshost xunil-03.coe.drexel.edu 
 \o Working Directory:	xunil-03.coe.drexel.edu:/home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45
 \o 64-bit offsets
 \o Qt version: 		4.7.2
@@ -11,87 +11,67 @@
 \o changeWorkingDir("/home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45") unnecessary.
 \o ddSetForcedLib("") unnecessary.
 \o MPS service: map window
-\w Warning: The directory: '/home/njs82@drexel.edu/ECEC471/NCSU_FreePDK45/ECEC471_Lib' does not exist
-\w 	but was defined in libFile '/home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/cds.lib' for Lib 'ECEC471_Lib'.
 \o Library Manager customization server connected.
 \a nrSetCurrentWindow(cdsLibManager)
 \a cdsLibManager->libListBox->value = "ECEC472_Lib"
+\a nrListItemAction(cdsLibManager->libListBox "ECEC472_Lib" 0)
 \a cdsLibManager->libLineEdit->value = "ECEC472_Lib"
-\a cdsLibManager->cellListBox->value = "mixer"
-\a lmgrLogShowPopup("mainListPopup1" 22 8 2 "mixer")
-\a cdsLibManager->cellLineEdit->value = "mixer"
-\a cdsLibManager->editRenameButton->value = t
-\a basicRenameForm->basicRenameFromEdit->value = "mixer"
-\a nrSetWindowVisibility(basicRenameForm "show")
-\a basicRenameForm->basicRenameToEdit->value = "mixer"
-\a nrSetCurrentWindow(basicRenameForm)
-\a nrResizeWindow(basicRenameForm list(863 355 343 180))
-\a basicRenameForm->basicRenameToEdit->value = "gil_cell_mixer"
-\a basicRenameForm->OK->value = t
-\o Renaming Cell "mixer" to "gil_cell_mixer" in library "ECEC472_Lib".
-\a nrSetWindowVisibility(workingDialogForm "show")
-\a nrSetCurrentWindow(workingDialogForm)
-\a nrResizeWindow(workingDialogForm list(889 381 290 129))
-\a workingDialogForm->Close->value = t
-\a nrSetCurrentWindow(basicRenameForm)
+\a cdsLibManager->cellListBox->value = "sim_dffrs_x2"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
 \a cdsLibManager->cellListBox->value = nil
-\a cdsLibManager->cellLineEdit->value = ""
-\a cdsLibManager->libListBox->value = nil
-\a cdsLibManager->libLineEdit->value = ""
-\w Warning: The directory: '/home/njs82@drexel.edu/ECEC471/NCSU_FreePDK45/ECEC471_Lib' does not exist
-\w 	but was defined in libFile '/home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/cds.lib' for Lib 'ECEC471_Lib'.
-\a cdsLibManager->libListBox->value = "ECEC472_Lib"
-\a cdsLibManager->libLineEdit->value = "ECEC472_Lib"
-\a nrSetCurrentWindow(cdsLibManager)
-\a cdsLibManager->cellListBox->value = "sim_mixer"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a nrListItemAction(cdsLibManager->cellListBox 5 0)
+\a cdsLibManager->cellListBox->value = "sim_dffrs_x2"
 \a cdsLibManager->viewListBox->value = "schematic"
 \a cdsLibManager->viewLineEdit->value = "schematic"
 \a cdsLibManager->viewLineEdit->value = ""
 \a cdsLibManager->viewListBox->value = nil
-\a lmgrLogShowPopup("mainListPopup1" 37 15 2 "sim_mixer")
-\a cdsLibManager->cellLineEdit->value = "sim_mixer"
-\a cdsLibManager->editRenameButton->value = t
-\a basicRenameForm->basicRenameFromEdit->value = "sim_mixer"
-\a nrSetWindowVisibility(basicRenameForm "show")
-\a basicRenameForm->basicRenameToEdit->value = "sim_mixer"
-\a nrSetCurrentWindow(basicRenameForm)
-\a basicRenameForm->basicRenameToEdit->value = "sim_gil_cell_mixer"
-\a basicRenameForm->OK->value = t
-\o Renaming Cell "sim_mixer" to "sim_gil_cell_mixer" in library "ECEC472_Lib".
-\a nrSetWindowVisibility(workingDialogForm "show")
-\a nrSetCurrentWindow(workingDialogForm)
-\a nrResizeWindow(workingDialogForm list(889 381 290 129))
-\a workingDialogForm->Close->value = t
-\a nrSetCurrentWindow(basicRenameForm)
-\a nrSetCurrentWindow(cdsLibManager)
+\o MPS request: edit design
 \a cdsLibManager->libListBox->value = nil
 \a cdsLibManager->cellListBox->value = nil
 \a cdsLibManager->libLineEdit->value = ""
-\w Warning: The directory: '/home/njs82@drexel.edu/ECEC471/NCSU_FreePDK45/ECEC471_Lib' does not exist
-\w 	but was defined in libFile '/home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/cds.lib' for Lib 'ECEC471_Lib'.
 \a cdsLibManager->libListBox->value = "ECEC472_Lib"
 \a cdsLibManager->libLineEdit->value = "ECEC472_Lib"
-\a cdsLibManager->cellListBox->value = "gil_cell_mixer"
+\a cdsLibManager->cellListBox->value = "sim_dffrs_x2"
 \a cdsLibManager->viewListBox->value = "schematic"
 \a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellLineEdit->value = "sim_dffrs_x2"
+\a nrSetCurrentWindow(cdsLibManager)
 \a cdsLibManager->cellListBox->value = "sim_gil_cell_mixer"
 \a cdsLibManager->viewLineEdit->value = ""
 \a cdsLibManager->viewListBox->value = nil
 \a cdsLibManager->viewListBox->value = "schematic"
 \a cdsLibManager->viewLineEdit->value = "schematic"
-\a cdsLibManager->cellListBox->value = "gil_cell_mixer"
+\a cdsLibManager->cellListBox->value = "ring_counter_std_cells"
 \a cdsLibManager->viewLineEdit->value = ""
 \a cdsLibManager->viewListBox->value = nil
 \a cdsLibManager->viewListBox->value = "schematic"
 \a cdsLibManager->viewLineEdit->value = "schematic"
-\a cdsLibManager->cellLineEdit->value = "gil_cell_mixer"
-\a cdsLibManager->viewListBox->value = "layout"
-\a cdsLibManager->viewLineEdit->value = "layout"
+\a cdsLibManager->cellListBox->value = "ring_counter"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
 \a cdsLibManager->viewListBox->value = "schematic"
 \a cdsLibManager->viewLineEdit->value = "schematic"
-\a cdsLibManager->viewListBox->value = "symbol"
-\a cdsLibManager->viewLineEdit->value = "symbol"
-\a lmgrLogShowPopup("mainListPopup2" 63 43 2 "symbol")
+\a cdsLibManager->cellListBox->value = "ring_counter_std_cells"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "ring_counter"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a lmgrLogShowPopup("mainListPopup1" 49 31 2 "ring_counter")
+\a cdsLibManager->cellLineEdit->value = "ring_counter"
 \a cdsLibManager->editDeleteButton->value = t
 \a deleteForm->deleteBothRadioButton->value = t
 \a deleteForm->deleteFilterEdit->value = "*"
@@ -103,30 +83,271 @@
 \o QUESTION (CLM-199): The following 1 items are marked for deletion.  Are you sure?
 \a nrSetWindowVisibility(mcMBXDLG "show")
 \a nrSetCurrentWindow(mcMBXDLG)
-\a nrResizeWindow(mcMBXDLG list(840 335 388 237))
+\a nrResizeWindow(mcMBXDLG list(840 335 388 284))
 \a mcMBXDLG->pushButton1->value = t
-\o Deleting view "symbol" from cell "gil_cell_mixer" in library "ECEC472_Lib".
+\o Deleting cell "ring_counter" from library "ECEC472_Lib".
 \a nrSetWindowVisibility(workingDialogForm "show")
 \a nrSetCurrentWindow(deleteForm)
 \a nrSetCurrentWindow(cdsLibManager)
-\o Deleted cellview 'ECEC472_Lib/gil_cell_mixer/symbol'.
-\o Deletion of 1 view done.
+\a nrSetCurrentWindow(workingDialogForm)
+\o Deleted cell 'ECEC472_Lib/ring_counter'.
+\o Deletion of 1 cell done.
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = nil
+\a nrResizeWindow(workingDialogForm list(892 410 290 129))
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "ECEC472_Lib"
+\a cdsLibManager->libLineEdit->value = "ECEC472_Lib"
+\a cdsLibManager->cellListBox->value = "s_p_converter"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a lmgrLogShowPopup("mainListPopup1" 84 39 2 "s_p_converter")
+\a cdsLibManager->cellLineEdit->value = "s_p_converter"
+\a cdsLibManager->cellListBox->value = "ring_counter_std_cells"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a lmgrLogShowPopup("mainListPopup1" 69 31 2 "ring_counter_std_cells")
+\a cdsLibManager->cellLineEdit->value = "ring_counter_std_cells"
+\a lmgrLogShowPopup("mainListPopup1" 63 28 2 "ring_counter_std_cells")
+\a cdsLibManager->editRenameButton->value = t
+\a basicRenameForm->basicRenameFromEdit->value = "ring_counter_std_cells"
+\a nrSetWindowVisibility(basicRenameForm "show")
+\a basicRenameForm->basicRenameToEdit->value = "ring_counter_std_cells"
+\a nrSetCurrentWindow(basicRenameForm)
+\a nrResizeWindow(basicRenameForm list(863 355 343 180))
+\a basicRenameForm->basicRenameToEdit->value = "ring_counter"
+\a basicRenameForm->OK->value = t
+\o Renaming Cell "ring_counter_std_cells" to "ring_counter" in library "ECEC472_Lib".
+\a nrSetWindowVisibility(workingDialogForm "show")
+\a nrSetCurrentWindow(workingDialogForm)
+\a nrResizeWindow(workingDialogForm list(889 381 290 129))
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "ECEC472_Lib"
+\a cdsLibManager->libLineEdit->value = "ECEC472_Lib"
+\a cdsLibManager->cellListBox->value = "sim_ring_counter"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a lmgrLogShowPopup("mainListPopup1" 81 84 2 "sim_ring_counter")
+\a cdsLibManager->cellLineEdit->value = "sim_ring_counter"
+\a cdsLibManager->editDeleteButton->value = t
+\a nrSetWindowVisibility(deleteForm "show")
+\a nrSetCurrentWindow(deleteForm)
+\a deleteForm->OK->value = t
+\o QUESTION (CLM-199): The following 1 items are marked for deletion.  Are you sure?
+\a nrSetWindowVisibility(mcMBXDLG "show")
+\a nrSetCurrentWindow(mcMBXDLG)
+\a nrResizeWindow(mcMBXDLG list(840 335 388 284))
+\a mcMBXDLG->pushButton1->value = t
+\o Deleting cell "sim_ring_counter" from library "ECEC472_Lib".
+\a nrSetWindowVisibility(workingDialogForm "show")
+\a nrSetCurrentWindow(deleteForm)
+\a nrSetCurrentWindow(cdsLibManager)
+\o Deleted cell 'ECEC472_Lib/sim_ring_counter'.
+\o Deletion of 1 cell done.
 \a nrSetCurrentWindow(workingDialogForm)
 \a nrSetCurrentWindow(cdsLibManager)
-\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
 \a nrResizeWindow(workingDialogForm list(889 381 290 129))
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "ECEC472_Lib"
+\a cdsLibManager->libLineEdit->value = "ECEC472_Lib"
+\a cdsLibManager->cellListBox->value = "sim_s_p_converter"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "sim_ring_counter_std_cells"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a lmgrLogShowPopup("mainListPopup1" 110 85 2 "sim_ring_counter_std_cells")
+\a cdsLibManager->cellLineEdit->value = "sim_ring_counter_std_cells"
+\a cdsLibManager->editRenameButton->value = t
+\a basicRenameForm->basicRenameFromEdit->value = "sim_ring_counter_std_cells"
+\a nrSetWindowVisibility(basicRenameForm "show")
+\a basicRenameForm->basicRenameToEdit->value = "sim_ring_counter_std_cells"
+\a nrSetCurrentWindow(basicRenameForm)
+\a basicRenameForm->basicRenameToEdit->value = "sim_ring_counter"
+\a nrDialogAccept(basicRenameForm)
+\a basicRenameForm->OK->value = t
+\o Renaming Cell "sim_ring_counter_std_cells" to "sim_ring_counter" in library "ECEC472_Lib".
+\a nrSetWindowVisibility(workingDialogForm "show")
+\a nrSetCurrentWindow(workingDialogForm)
+\a basicRenameForm->basicRenameToEdit->value = "sim_ring_counter"
+\a nrResizeWindow(workingDialogForm list(889 381 290 129))
+\a nrSetCurrentWindow(basicRenameForm)
 \a cdsLibManager->libListBox->value = nil
 \a cdsLibManager->cellListBox->value = nil
 \a cdsLibManager->cellLineEdit->value = ""
 \a cdsLibManager->libLineEdit->value = ""
-\w Warning: The directory: '/home/njs82@drexel.edu/ECEC471/NCSU_FreePDK45/ECEC471_Lib' does not exist
-\w 	but was defined in libFile '/home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/cds.lib' for Lib 'ECEC471_Lib'.
 \a cdsLibManager->libListBox->value = "ECEC472_Lib"
 \a cdsLibManager->libLineEdit->value = "ECEC472_Lib"
-\a cdsLibManager->cellListBox->value = "gil_cell_mixer"
-\a cdsLibManager->cellLineEdit->value = "gil_cell_mixer"
+\a nrSetCurrentWindow(cdsLibManager)
+\a lmgrLogShowPopup("mainListPopup1" 173 167 2 "")
+\a cdsLibManager->cellListBox->value = "ring_counter"
 \a cdsLibManager->viewListBox->value = "schematic"
 \a cdsLibManager->viewLineEdit->value = "schematic"
+\a nrListItemAction(cdsLibManager->cellListBox 2 0)
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\o MPS request: edit design
+\a cdsLibManager->cellLineEdit->value = "ring_counter"
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "s_p_converter"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a nrListItemAction(cdsLibManager->cellListBox 3 0)
+\a cdsLibManager->cellListBox->value = "s_p_converter"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\o MPS request: edit design
+\a cdsLibManager->cellLineEdit->value = "s_p_converter"
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "gated_sr_latch"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a nrListItemAction(cdsLibManager->cellListBox 0 0)
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\o MPS request: edit design
+\a cdsLibManager->cellLineEdit->value = "gated_sr_latch"
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->libListBox->value = "NangateOpenCellLibrary"
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = "NangateOpenCellLibrary"
+\a cdsLibManager->cellListBox->value = "DLH_X1"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "TINV_X1"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "TLAT_X1"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "DLH_X1"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "DLH_X2"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a _lmgrCloseIconify("cdsLibManager" 1)
+\a cdsLibManager->cellLineEdit->value = "DLH_X2"
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->libListBox->value = "ECEC472_Lib"
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = "ECEC472_Lib"
+\a cdsLibManager->cellListBox->value = "sim_s_p_converter"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a nrListItemAction(cdsLibManager->cellListBox 7 0)
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\o MPS request: edit design
+\a cdsLibManager->cellLineEdit->value = "sim_s_p_converter"
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "sim_ring_counter"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "ring_counter"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a nrListItemAction(cdsLibManager->cellListBox 2 0)
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\o MPS request: edit design
+\a cdsLibManager->cellLineEdit->value = "ring_counter"
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "sim_s_p_converter"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "sim_ring_counter"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a nrListItemAction(cdsLibManager->cellListBox 6 0)
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\o MPS request: edit design
+\a cdsLibManager->cellLineEdit->value = "sim_ring_counter"
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "sim_dffrs_x2"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a nrListItemAction(cdsLibManager->cellListBox 4 0)
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\o MPS request: edit design
+\a cdsLibManager->cellLineEdit->value = "sim_dffrs_x2"
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "sim_ring_counter"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellLineEdit->value = "sim_ring_counter"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->gdmXTView 0 0)
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrResizeWindow(cdsLibManager list(262 45 1519 747))
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "s_p_converter"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "ring_counter"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "gil_cell_mixer"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellLineEdit->value = "gil_cell_mixer"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
 \o MPS request: edit design
 \a nrListItemAction(cdsLibManager->gdmXTView 1 0)
 \a nrSetCurrentWindow(cdsLibManager)
@@ -135,31 +356,92 @@
 \a cdsLibManager->viewListBox->value = nil
 \a cdsLibManager->viewListBox->value = "schematic"
 \a cdsLibManager->viewLineEdit->value = "schematic"
-\a nrListItemAction(cdsLibManager->cellListBox 1 0)
-\a cdsLibManager->viewLineEdit->value = ""
-\a cdsLibManager->viewListBox->value = nil
-\o MPS request: edit design
 \a cdsLibManager->cellLineEdit->value = "sim_gil_cell_mixer"
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->viewListBox->value = nil
 \a cdsLibManager->viewListBox->value = "schematic"
 \o MPS request: edit design
 \a nrListItemAction(cdsLibManager->gdmXTView 0 0)
 \a nrSetCurrentWindow(cdsLibManager)
-\a cdsLibManager->cellListBox->value = "gil_cell_mixer"
+\a cdsLibManager->cellListBox->value = "sim_dffrs_x2"
 \a cdsLibManager->viewLineEdit->value = ""
 \a cdsLibManager->viewListBox->value = nil
 \a cdsLibManager->viewListBox->value = "schematic"
 \a cdsLibManager->viewLineEdit->value = "schematic"
-\a cdsLibManager->cellLineEdit->value = "gil_cell_mixer"
-\a cdsLibManager->viewListBox->value = "layout"
-\a cdsLibManager->viewLineEdit->value = "layout"
+\a cdsLibManager->cellListBox->value = "sim_gil_cell_mixer"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "sim_ring_counter"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "sim_s_p_converter"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "s_p_converter"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a lmgrLogShowPopup("mainListPopup1" 65 44 2 "s_p_converter")
+\a cdsLibManager->cellLineEdit->value = "s_p_converter"
+\a cdsLibManager->copySimpleButton->value = t
+\a basicCopyForm->CategoryCellsEdit->value = "*"
+\a basicCopyForm->CellsSkipLibraries->value = t
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "*"
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "*"
+\a basicCopyForm->ViewsSkipLibraries->value = t
+\a basicCopyForm->ViewsSkipLibrariesEdit->value = "*"
+\a basicCopyForm->CopyFromLibrary->value = "ECEC471_Lib"
+\a basicCopyForm->CopyToLibrary->value = "ECEC471_Lib"
+\a basicCopyForm->CopyFromLibrary->value = "ECEC472_Lib"
+\a basicCopyForm->CopyFromCell->value = "s_p_converter"
+\a basicCopyForm->CopyToLibrary->value = "ECEC472_Lib"
+\a basicCopyForm->CopyToCell->value = "s_p_converter"
+\a basicCopyForm->CellsViewsToCopy->value = "schematic symbol"
+\a basicCopyForm->CellsSkipLibrariesEdit->value = ""
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "ECEC471_Lib LowPowerOpenCellLibrary NCSU_Devices_FreePDK45 NCSU_TechLib_FreePDK45 NangateOpenCellLibrary OSU_TechLib_FreePDK45 US_8ths analogLib avTech basic cdsDefTechLib"
+\a basicCopyForm->ViewsSkipLibrariesEdit->value = "ECEC471_Lib LowPowerOpenCellLibrary NCSU_Devices_FreePDK45 NCSU_TechLib_FreePDK45 NangateOpenCellLibrary OSU_TechLib_FreePDK45 US_8ths analogLib avTech basic cdsDefTechLib"
+\a nrSetWindowVisibility(basicCopyForm "show")
+\a nrSetCurrentWindow(basicCopyForm)
+\a nrResizeWindow(basicCopyForm list(799 124 444 618))
+\a basicCopyForm->CopyFromCell->value = "s_p_converter"
+\a nrSetCurrentWindow(cdsLibManager)
+\a basicCopyForm->CopyToCell->value = "SIPO12"
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->libListBox->value = "OSU_TechLib_FreePDK45"
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = "OSU_TechLib_FreePDK45"
+\a nrSetCurrentWindow(basicCopyForm)
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->libListBox->value = "LowPowerOpenCellLibrary"
+\a cdsLibManager->libListBox->value = "ECEC472_Lib"
+\a nrSetCurrentWindow(basicCopyForm)
+\a cdsLibManager->libLineEdit->value = "ECEC472_Lib"
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "s_p_converter"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellLineEdit->value = "s_p_converter"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
 \o MPS request: edit design
 \a nrListItemAction(cdsLibManager->gdmXTView 0 0)
 \a nrSetCurrentWindow(cdsLibManager)
-\a nrResizeWindow(cdsLibManager list(252 161 1519 747))
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "OSU_TechLib_FreePDK45"
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = "OSU_TechLib_FreePDK45"
 \a nrSetCurrentWindow(cdsLibManager)
 \a _lmgrCloseIconify("cdsLibManager" 1)
