@@ -1,0 +1,12 @@
+define VIEW_MAP ( $VIEW_MAP \
+, .template => template \
+)
+define LIB_MAP ( $LIB_MAP \
+, ../../../../../../../../mnt/class_data/ecec571-f2015/PDKs/NangateOpenCellLibrary_PDKv1_3_v2010_12/Front_End/Verilog/NangateOpenCellLibrary.v => NangateOpenCellLibrary \
+)
+define VIEW_MAP ( $VIEW_MAP \
+, .template => template \
+)
+define LIB_MAP ( $LIB_MAP \
+, ../../../../../../../../mnt/class_data/ecec571-f2015/PDKs/NangateOpenCellLibrary_PDKv1_3_v2010_12/Front_End/Verilog/NangateOpenCellLibrary.v => NangateOpenCellLibrary \
+)

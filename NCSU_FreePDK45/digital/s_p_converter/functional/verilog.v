@@ -1,3 +1,4 @@
+// Created by ihdl
 module s_p_converter
 	#(parameter C_BITS_OUT = 255)
 	(input CK,

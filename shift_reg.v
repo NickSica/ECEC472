@@ -1,5 +1,5 @@
 module shift_reg
-	#(parameter C_NUM_REGS=255)
+	#(parameter C_NUM_REGS = 10)
 	(input  CK,
 	 input  D,
 	 output Q);

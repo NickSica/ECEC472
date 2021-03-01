@@ -1,0 +1,20 @@
+ncvlog: *W,DLNOHV: Unable to find an 'hdl.var' file to load in.
+TOOL:	ncvlog(64)	15.10-s002: Started on Mar 01, 2021 at 17:16:55 EST
+ncvlog
+    -use5x
+    -work __nclib
+    -view module
+    -logfile ncvlog.log
+    -cdslib /tmp/ihdl_cdslibb3854_13854
+    -messages
+    -nostdout
+    -nocopyright
+    -ESCAPEDNAME
+    /home/njs82@drexel.edu/ECEC472/s_p_converter.v
+
+file: /home/njs82@drexel.edu/ECEC472/s_p_converter.v
+	module __nclib.s_p_converter:module
+		errors: 0, warnings: 0
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+TOOL:	ncvlog(64)	15.10-s002: Exiting on Mar 01, 2021 at 17:16:55 EST  (total: 00:00:00)

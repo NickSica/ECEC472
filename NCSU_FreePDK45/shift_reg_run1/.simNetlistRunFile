@@ -1,0 +1,11 @@
+simVerilogNetlistFileList = '(
+    (("digital" "shift_reg") 
+	("cds0/netlist" "cds0/map" "functional")
+    )
+)
+simVerilogNetlistFileLibList = '("digital")
+simVerilogNetlistFileCellList = '(("digital" 
+	("shift_reg")
+    )
+)
+hnlIncrementalDirectory = '"ihnl"

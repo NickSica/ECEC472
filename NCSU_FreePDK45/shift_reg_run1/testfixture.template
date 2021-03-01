@@ -1,0 +1,23 @@
+
+`timescale 1ns / 1ns
+
+module test;
+
+
+wire  Q;
+
+reg  CK, D;
+
+
+
+shift_reg top(CK, D, Q); 
+ 
+
+`ifdef verilog
+
+ //please enter any additional verilog stimulus in the /home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/shift_reg_run1/testfixture.verilog file
+`include "/home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/shift_reg_run1/testfixture.verilog"
+
+`endif
+
+endmodule 

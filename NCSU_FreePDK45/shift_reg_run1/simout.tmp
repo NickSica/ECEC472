@@ -1,0 +1,18 @@
+TOOL:	ncxlmode	15.10-s002: Started on Feb 28, 2021 at 23:12:47 EST
+ncxlmode
+	+delay_mode_path
+	+typdelays
+	-v
+	/mnt/class_data/ecec571-f2015/PDKs/NangateOpenCellLibrary_PDKv1_3_v2010_12/Front_End/Verilog/NangateOpenCellLibrary.v
+	-l
+	simout.tmp
+	/home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/shift_reg_run1/testfixture.template
+	-f /home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/shift_reg_run1/verilog.inpfiles
+		/mnt/class_data/ecec472_572/group8/cadence/digital/shift_reg/functional/verilog.v
+		ihnl/cds0/netlist
+	+nostdout
+	+nocopyright
+	+elaborate
+	+ncvlogargs+" -neverwarn -nostdout -nocopyright "
+	+ncelabargs+" -neg_tchk  -nonotifier  -sdf_NOCheck_celltype  -access +r  -pulse_e 100  -pulse_r 100  -neverwarn  -timescale 1ns/1ns -nostdout -nocopyright"
+TOOL:	ncxlmode	15.10-s002: Exiting on Feb 28, 2021 at 23:12:47 EST  (total: 00:00:00)

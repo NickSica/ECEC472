@@ -1,0 +1,13 @@
+@(#)$CDS: ihdl version 6.1.6-64b 09/01/2015 22:58 (sjfnl132) $  Mon Mar  1 17:16:54 2021
+
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module DFF_X2. Therefore using library
+NangateOpenCellLibrary, cell DFF_X2, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module DLH_X1. Therefore using library
+NangateOpenCellLibrary, cell DLH_X1, and view symbol as the symbol.
+WARNING (VERILOGIN-22): Module ring_counter, instantiated in the top module s_p_converter, is not defined. Therefore the top
+module s_p_converter will be imported as functional.
+INFO (VERILOGIN-357): Checked in symbol s_p_converter.
+WARNING (VERILOGIN-72): Could not find the symbol master for the instance RC. Therefore the functional
+view will not have this instance.
+INFO (VERILOGIN-345): Checked in functional view s_p_converter. Symbol for lower level instance not found
+INFO (VERILOGIN-206): End of Logfile.

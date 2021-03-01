@@ -1,0 +1,2 @@
+cellViewCounterTable = makeTable('cellViewCounterTableType nil)
+cellViewCounterTable['("digital" "shift_reg" "functional" )] =  11

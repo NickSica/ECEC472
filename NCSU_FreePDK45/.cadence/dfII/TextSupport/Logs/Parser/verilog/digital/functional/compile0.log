@@ -1,0 +1,17 @@
+ncvlog(64): 15.10-s002: (c) Copyright 1995-2015 Cadence Design Systems, Inc.
+TOOL:	ncvlog(64)	15.10-s002: Started on Mar 01, 2021 at 17:09:02 EST
+ncvlog
+    -use5x
+    -SPECIFICUNIT shift_reg
+    -zparse /tmp/vamsZparac7153
+    -NOWARN DLNOHV
+    -work digital
+    -view functional
+    -nostdout
+    -logfile /home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/.cadence/dfII/TextSupport/Logs/Parser/verilog/digital/functional/compile0.log
+    -messages
+    -cdslib /home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/cds.lib
+    /mnt/class_data/ecec472_572/group8/cadence/digital/shift_reg/functional/verilog.v
+
+ncvlog: *F,WRKBAD: logical library name WORK is bound to a bad library name 'digital'.
+TOOL:	ncvlog(64)	15.10-s002: Exiting on Mar 01, 2021 at 17:09:02 EST  (total: 00:00:00)

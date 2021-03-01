@@ -1,0 +1,14 @@
+
+`timescale 1ns / 1ns
+
+module test;
+
+
+wire  Q;
+
+reg  CK, D;
+
+
+
+shift_reg top(CK, D, Q); 
+ 

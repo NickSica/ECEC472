@@ -1,0 +1,19 @@
+// Verilog HDL and netlist files of
+// "digital shift_reg functional"
+
+// HDL models
+
+// HDL file for digital, shift_reg, functional.
+/mnt/class_data/ecec472_572/group8/cadence/digital/shift_reg/functional/verilog.v
+
+
+
+// End HDL models
+
+// Netlisted models
+
+// netlist file - digital, shift_reg, functional.
+ihnl/cds0/netlist
+
+
+// End HDL models

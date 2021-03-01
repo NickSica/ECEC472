@@ -1,0 +1,33 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "shift_reg"
+  repList "behavioral functional system verilog pld_verilog lai_verilog lmsi_verilog schematic symbol"
+  stopList "verilog pld_verilog lai_verilog lmsi_verilog symbol"
+  hierDelim "."
+  hierPrefix "test.top"
+  globalHierPrefix "cds_globals."
+  netlistDir "/home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/shift_reg_run1"
+  busRef   "ORDERED"
+  netType   "BUS"
+  leftStr  "["
+  rangeStr  ":"
+  rightStr  "]"
+ )
+( instViewTable
+ )
+( defbus
+ )
+( net
+ )
+( inst
+ )
+( model
+( "digital/shift_reg/functional" "shift_reg" )
+ )
+( term
+ )
+( param
+ )
+( "shift_reg" "ihnl/cds0/map" )
+ )
