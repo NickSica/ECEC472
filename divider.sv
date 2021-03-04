@@ -14,6 +14,7 @@ module divider
 	wire [C_NUM_BITS - 1:0] quotient;
 	wire GCK;
 	wire R;
+	wire sri;
 	wire gt;
 	wire eq;
 	wire lt;
@@ -281,26 +282,26 @@ module divider
 		(.A(RN),
 		 .ZN(R));
 
-	univ_shift_reg remainder
+	univ_shift_reg
 		#(.C_NUM_BITS(C_NUM_BITS))
-		(.CK(GCK),
-		 .RN(RN),
-		 .S0(1'b1),
-		 .S1(1'b1),
-		 .SRI(Q[C_NUM_BITS - 1]),
-		 .SLI(),
-		 .D({ alu[C_NUM_BITS - 2:0], Q[C_NUM_BITS - 1] }),
-		 .Q(rem));
+		remainder (.CK(GCK),
+							 .RN(RN),
+							 .S0(1'b1),
+							 .S1(1'b1),
+							 .SRI(Q[C_NUM_BITS - 1]),
+							 .SLI(),
+							 .D({ alu[C_NUM_BITS - 2:0], Q[C_NUM_BITS - 1] }),
+							 .Q(rem));
 
-	univ_shift_reg quotient
+	univ_shift_reg
 		#(.C_NUM_BITS(C_NUM_BITS))
-		(.CK(GCK),
-		 .RN(1'b1),
-		 .S0(R),
-		 .S1(shift),
-		 .SRI(sri),
-		 .SLI(rem[C_NUM_BITS - 1]),
-		 .D(A),
-		 .Q(quotient));
+		quotient (.CK(GCK),
+							.RN(1'b1),
+							.S0(R),
+							.S1(shift),
+							.SRI(sri),
+							.SLI(rem[C_NUM_BITS - 1]),
+							.D(A),
+							.Q(quotient));
 
 endmodule
