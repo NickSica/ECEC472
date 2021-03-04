@@ -11,7 +11,7 @@ module divider
 	wire [C_NUM_BITS - 1:0] add;
 	wire [C_NUM_BITS - 1:0] alu;
 	wire [C_NUM_BITS - 1:0] rem;
-	wire [C_NUM_BITS - 1:0] quotient;
+	wire [C_NUM_BITS - 1:0] quo;
 	wire GCK;
 	wire R;
 	wire sri;
@@ -30,7 +30,7 @@ module divider
 	generate
 		for(i = 0; i < C_NUM_BITS; i++) begin : g_latch
 			DLH_X1 L0
-				(.D(quotient[i]),
+				(.D(quo[i]),
 				 .G(valid),
 				 .Q(Q[i]));
 		end
@@ -302,6 +302,6 @@ module divider
 							.SRI(sri),
 							.SLI(rem[C_NUM_BITS - 1]),
 							.D(A),
-							.Q(quotient));
+							.Q(quo));
 
 endmodule
