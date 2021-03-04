@@ -23,7 +23,7 @@ module univ_shift_reg
 		(.D0(Q[0]),
 		 .D1(SLI),
 		 .D2(Q[2]),
-		 .D3(D[i]),
+		 .D3(D[0]),
 		 .S0(S0),
 		 .S1(S1),
 		 .Z(dff_in[0]));
