@@ -36,7 +36,7 @@ module divider
 	endgenerate
 
 	// ALU logic
-	full_subtractor_24bit
+	full_subtractor_24bit S0
 		(.a0 (rem[0]),
 		 .a1 (rem[1]),
 		 .a2 (rem[2]),
@@ -111,7 +111,7 @@ module divider
 		 .s23(sub[23]),
 		 .cout());
 
-	full_adder_24bit
+	full_adder_24bit A0
 		(.a0 (rem[0]),
 		 .a1 (rem[1]),
 		 .a2 (rem[2]),
@@ -198,7 +198,7 @@ module divider
 	endgenerate
 
 	// Control logic
-	comparator_24bit
+	comparator_24bit COMP0
 		(.a0 (rem[0]),
 		 .a1 (rem[1]),
 		 .a2 (rem[2]),
