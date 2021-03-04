@@ -1,6 +1,6 @@
 \o Program:		@(#)$CDS: cdsLibEditor version 6.1.6 - CAT33 07/09/2015 16:05 (sjfnl733) $
 \o Sub version:		sub-version  s018 
-\o Arguments:		-display :52.0 -mpssession virtuoso29102 -mpshost xunil-03.coe.drexel.edu -namespace CDBA -cdslib /home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/cds.lib 
+\o Arguments:		-cdslib /home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/cds.lib -mpssession virtuoso27153 -mpshost xunil-03.coe.drexel.edu 
 \o Working Directory:	xunil-03.coe.drexel.edu:/home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45
 \o 64-bit offsets
 \a nrSetWindowVisibility(cdsLibEditor "show")
@@ -9,8 +9,24 @@
 \a nrListItemAction(cdsLibEditor->mainTable 0 0)
 \o Active cell: 0 0 "analogLib"
 \a nrResizeWindow(cdsLibEditor list(707 283 500 400))
+\a nrResizeWindow(cdsLibEditor list(707 283 758 472))
 \a nrListItemAction(cdsLibEditor->mainTable 12 1)
-\o Active cell: 12 1 ""
+\o Active cell: 12 1 "/home/njs82@drexel.edu/ECEC472/NCSU_FreePDK45/digital"
+\o QUESTION (CLE-200): The directory "/mnt/class_data/ecec/NCSU_FreePDK45/digital" \ndoesn't exist. If other tools use this file, \nan error will occur unless you either create \nthe directory you have specified or change the \npath to an existing directory. \n\nDo you want to create a new library? 
+\a nrSetWindowVisibility(needCreateDialog "show")
+\a nrSetCurrentWindow(needCreateDialog)
+\a nrResizeWindow(needCreateDialog list(878 426 416 186))
+\a needCreateDialog->noButton->value = t
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrListItemAction(cdsLibEditor->mainTable 13 1)
+\o Active cell: 13 1 ""
+\a nrListItemAction(cdsLibEditor->mainTable 12 1)
+\o Active cell: 12 1 "/mnt/class_data/ecec472_572/group8/cadence/"
+\a nrListItemAction(cdsLibEditor->mainTable 13 0)
+\o Active cell: 13 0 ""
+\a nrListItemAction(cdsLibEditor->mainTable 12 0)
+\o Active cell: 12 0 "digital"
+\a cdsLibEditor->fileSaveButton->value = t
 \a cdsLibEditor->fileExitButton->value = t
 \a nrSetWindowVisibility(cdsLibEditor "hide")
 \a exit(0)
