@@ -19,7 +19,8 @@ module divider
 	wire gt;
 	wire eq;
 	wire lt;
-	wire shift;
+	wire shift_quo;
+	wire shift_rem;
 	wire valid;
 
 	CLKGATE_X1 CG0
@@ -265,24 +266,29 @@ module divider
 		 .Q6(count[6]),
 		 .Q7(count[7]));
 
-	AND2_X1 AND0
-		(.A1(count[3]),
-		 .A2(count[4]),
+	AND3_X1 AND0
+		(.A1(count[4]),
+		 .A2(count[5]),
 		 .ZN(valid));
 
 	// Shift register logic
 	MUX2_X1 MUX
 		(.A(1'b1),
 		 .B(1'b0),
-		 .S(lt),
+		 .S(count[0]),
 		 .Z(sri));
+
+	OR2_X1 O20
+		(.A1(lt),
+		 .A2(count[0]),
+		 .ZN(shift_rem));
 
 	OR4_X1 O30
 		(.A1(gt),
 		 .A2(eq),
 		 .A3(lt),
 		 .A4(R),
-		 .ZN(shift));
+		 .ZN(shift_quo));
 
 	INV_X1 I0
 		(.A(RN),
@@ -292,7 +298,7 @@ module divider
 		#(.C_NUM_BITS(C_NUM_BITS))
 		remainder (.CK(GCK),
 							 .RN(RN),
-							 .S0(1'b1),
+							 .S0(shift_rem),
 							 .S1(1'b1),
 							 .SRI(Q[C_NUM_BITS - 1]),
 							 .SLI(),
@@ -304,7 +310,7 @@ module divider
 		quotient (.CK(GCK),
 							.RN(1'b1),
 							.S0(R),
-							.S1(shift),
+							.S1(shift_quo),
 							.SRI(sri),
 							.SLI(rem[C_NUM_BITS - 1]),
 							.D(A),
