@@ -7,17 +7,17 @@
  */
 
 module univ_shift_reg
-	#(parameter C_BIT_NUM = 24)
+	#(parameter C_NUM_BITS = 24)
 	(input CK,
 	 input RN,
 	 input S0,
 	 input S1,
 	 input SRI,
 	 input SLI,
-	 input [C_BIT_NUM - 1:0] D,
-	 output [C_BIT_NUM - 1:0] Q);
+	 input [C_NUM_BITS - 1:0] D,
+	 output [C_NUM_BITS - 1:0] Q);
 
-	wire [C_BIT_NUM - 1:0] dff_in;
+	wire [C_NUM_BITS - 1:0] dff_in;
 
 	MUX4 MUX0
 		(.D0(Q[0]),
@@ -37,7 +37,7 @@ module univ_shift_reg
 
 	genvar i;
 	generate
-		for(i = 1; i < C_BIT_NUM - 1; i++) begin : g_regs
+		for(i = 1; i < C_NUM_BITS - 1; i++) begin : g_regs
 			MUX4 MUX
 				(.D0(Q[i]),
 				 .D1(Q[i - 1]),
@@ -57,19 +57,19 @@ module univ_shift_reg
 	endgenerate
 
 	MUX4 MUX1
-		(.D0(Q[C_BIT_NUM - 1]),
-		 .D1(Q[C_BIT_NUM - 2]),
+		(.D0(Q[C_NUM_BITS - 1]),
+		 .D1(Q[C_NUM_BITS - 2]),
 		 .D2(Q[SRI]),
-		 .D3(D[C_BIT_NUM - 1]),
+		 .D3(D[C_NUM_BITS - 1]),
 		 .S0(S0),
 		 .S1(S1),
-		 .Z(dff_in[C_BIT_NUM - 1]));
+		 .Z(dff_in[C_NUM_BITS - 1]));
 
 	DFFR_X1 DFFR1
 		(.CK(CK),
 		 .RN(RN),
-		 .D(dff_in[C_BIT_NUM - 1]),
-		 .Q(Q[C_BIT_NUM - 1]),
+		 .D(dff_in[C_NUM_BITS - 1]),
+		 .Q(Q[C_NUM_BITS - 1]),
 		 .QN());
 
 endmodule
