@@ -12,6 +12,7 @@ module divider
 	wire [C_NUM_BITS - 1:0] alu;
 	wire [C_NUM_BITS - 1:0] rem;
 	wire [C_NUM_BITS - 1:0] quo;
+	wire [7:0] count;
 	wire GCK;
 	wire R;
 	wire sri;
@@ -255,14 +256,19 @@ module divider
 	counter C0
 		(.CK(GCK),
 		 .RN(RN),
-		 .Q0(),
-		 .Q1(),
-		 .Q2(),
-		 .Q3(),
-		 .Q4(),
-		 .Q5(valid),
-		 .Q6(),
-		 .Q7());
+		 .Q0(count[0]),
+		 .Q1(count[1]),
+		 .Q2(count[2]),
+		 .Q3(count[3]),
+		 .Q4(count[4]),
+		 .Q5(count[5]),
+		 .Q6(count[6]),
+		 .Q7(count[7]));
+
+	AND2_X1 AND0
+		(.A1(count[3]),
+		 .A2(count[4]),
+		 .ZN(valid));
 
 	// Shift register logic
 	MUX2_X1 MUX
