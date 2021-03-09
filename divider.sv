@@ -116,7 +116,7 @@ module divider
 		 .cout());
 
 	full_adder_24bit A0
-			(.a0 (rem[0]),
+		(.a0 (rem[0]),
 		 .a1 (rem[1]),
 		 .a2 (rem[2]),
 		 .a3 (rem[3]),
@@ -188,6 +188,7 @@ module divider
 		 .s21(1'b0),
 		 .s22(1'b0),
 		 .s23(1'b0),
+		 .cin(1'b0),
 		 .cout());
 
 	genvar i;
@@ -293,7 +294,7 @@ module divider
 				(.A(alu[i]),
 				 .B(alu[i - 1]),
 				 .S(count[0]),
-				 .Z(rem[i]));
+				 .Z(rem_in[i]));
 		end
 	endgenerate
 
@@ -301,7 +302,7 @@ module divider
 		(.A(alu[0]),
 		 .B(quo[C_NUM_BITS - 1]),
 		 .S(count[0]),
-		 .Z(rem[0]));
+		 .Z(rem_in[0]));
 
 	INV_X1 I0
 		(.A(RN),

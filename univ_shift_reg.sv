@@ -7,7 +7,7 @@
  */
 
 module univ_shift_reg
-	#(parameter C_NUM_BITS = 24)
+	#(parameter C_NUM_BITS = 4)
 	(input CK,
 	 input RN,
 	 input S0,
@@ -21,8 +21,8 @@ module univ_shift_reg
 
 	MUX4 MUX0
 		(.D0(Q[0]),
-		 .D1(SLI),
-		 .D2(Q[2]),
+		 .D1(Q[1]),
+		 .D2(SRI),
 		 .D3(D[0]),
 		 .S0(S0),
 		 .S1(S1),
@@ -40,8 +40,8 @@ module univ_shift_reg
 		for(i = 1; i < C_NUM_BITS - 1; i++) begin : g_regs
 			MUX4 MUX
 				(.D0(Q[i]),
-				 .D1(Q[i - 1]),
-				 .D2(Q[i + 1]),
+				 .D1(Q[i + 1]),
+				 .D2(Q[i - 1]),
 				 .D3(D[i]),
 				 .S0(S0),
 				 .S1(S1),
@@ -58,8 +58,8 @@ module univ_shift_reg
 
 	MUX4 MUX1
 		(.D0(Q[C_NUM_BITS - 1]),
-		 .D1(Q[C_NUM_BITS - 2]),
-		 .D2(SRI),
+		 .D1(SLI),
+		 .D2(Q[C_NUM_BITS - 2]),
 		 .D3(D[C_NUM_BITS - 1]),
 		 .S0(S0),
 		 .S1(S1),
