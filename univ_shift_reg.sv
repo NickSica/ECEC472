@@ -59,7 +59,7 @@ module univ_shift_reg
 	MUX4 MUX1
 		(.D0(Q[C_NUM_BITS - 1]),
 		 .D1(Q[C_NUM_BITS - 2]),
-		 .D2(Q[SRI]),
+		 .D2(SRI),
 		 .D3(D[C_NUM_BITS - 1]),
 		 .S0(S0),
 		 .S1(S1),

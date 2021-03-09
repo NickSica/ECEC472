@@ -163,10 +163,10 @@ module divider
 		 .b21(1'b0),
 		 .b22(1'b0),
 		 .b23(1'b0),
-		 .s0 (sub[0]),
-		 .s1 (sub[1]),
-		 .s2 (sub[2]),
-		 .s3 (sub[3]),
+		 .s0 (add[0]),
+		 .s1 (add[1]),
+		 .s2 (add[2]),
+		 .s3 (add[3]),
 		 .s4 (1'b0),
 		 .s5 (1'b0),
 		 .s6 (1'b0),
@@ -195,7 +195,7 @@ module divider
 			MUX2_X1 MUX
 				(.A(sub[i]),
 				 .B(add[i]),
-				 .S(lt),
+				 .S(count[0]),
 				 .Z(alu[i]));
 		end
 	endgenerate
@@ -295,7 +295,7 @@ module divider
 							 .RN(RN),
 							 .S0(shift_rem),
 							 .S1(1'b1),
-							 .SRI(Q[C_NUM_BITS - 1]),
+							 .SRI(quo[C_NUM_BITS - 1]),
 							 .SLI(),
 							 .D({ alu[C_NUM_BITS - 2:0], Q[C_NUM_BITS - 1] }),
 							 .Q(rem));

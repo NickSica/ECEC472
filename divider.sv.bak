@@ -187,6 +187,7 @@ module divider
 		 .s21(add[21]),
 		 .s22(add[22]),
 		 .s23(add[23]),
+		 .cin(1'b0),
 		 .cout());
 
 	genvar i;
