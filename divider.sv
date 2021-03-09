@@ -10,6 +10,7 @@ module divider
 	wire [C_NUM_BITS - 1:0] sub;
 	wire [C_NUM_BITS - 1:0] add;
 	wire [C_NUM_BITS - 1:0] alu;
+	wire [C_NUM_BITS - 1:0] rem_in;
 	wire [C_NUM_BITS - 1:0] rem;
 	wire [C_NUM_BITS - 1:0] quo;
 	wire [7:0] count;
@@ -270,7 +271,7 @@ module divider
 	MUX2_X1 MUX
 		(.A(1'b1),
 		 .B(1'b0),
-		 .S(count[0]),
+		 .S(lt),
 		 .Z(sri));
 
 	OR2_X1 O20
@@ -285,6 +286,23 @@ module divider
 		 .A4(R),
 		 .ZN(shift_quo));
 
+	genvar i;
+	generate
+		for(i = 1; i < C_NUM_BITS; i++) begin : g_rem_in
+			MUX2_X1 MUX
+				(.A(alu[i]),
+				 .B(alu[i - 1]),
+				 .S(count[0]),
+				 .Z(rem[i]));
+		end
+	endgenerate
+
+	MUX2_X1 MUX1
+		(.A(alu[0]),
+		 .B(quo[C_NUM_BITS - 1]),
+		 .S(count[0]),
+		 .Z(rem[0]));
+
 	INV_X1 I0
 		(.A(RN),
 		 .ZN(R));
@@ -297,7 +315,7 @@ module divider
 							 .S1(1'b1),
 							 .SRI(quo[C_NUM_BITS - 1]),
 							 .SLI(),
-							 .D({ alu[C_NUM_BITS - 2:0], Q[C_NUM_BITS - 1] }),
+							 .D(rem_in),
 							 .Q(rem));
 
 	univ_shift_reg
