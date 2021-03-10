@@ -22,6 +22,7 @@ module divider
 	wire shift_quo;
 	wire shift_rem;
 	wire valid;
+	wire valid_tmp;
 
 	CLKGATE_X1 CG0
 		(.CK(CK),
@@ -267,8 +268,15 @@ module divider
 		 .Q6(count[6]),
 		 .Q7(count[7]));
 
-	AND3_X1 AND0
-		(.A1(count[4]),
+	AND4_X1 AND0
+		(.A1(count[0]),
+		 .A2(count[1]),
+		 .A3(count[2]),
+		 .A4(count[3]),
+		 .ZN(valid_tmp));
+
+	AND2_X1 AND1
+		(.A1(valid_tmp),
 		 .A2(count[5]),
 		 .ZN(valid));
 

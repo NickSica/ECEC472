@@ -7,7 +7,7 @@
  */
 
 module univ_shift_reg
-	#(parameter C_NUM_BITS = 4)
+	#(parameter C_NUM_BITS = 24)
 	(input CK,
 	 input RN,
 	 input S0,
