@@ -1,4 +1,4 @@
-module divider
+module divider_4bit
 	#(parameter C_NUM_BITS = 4)
 	(input  CK,
 	 input  RN,
@@ -236,7 +236,7 @@ module divider
 
 	OR2_X1 O30
 		(.A1(count[0]),
-		 .A4(R),
+		 .A2(R),
 		 .ZN(shift_quo));
 
 	genvar i;
