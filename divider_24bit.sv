@@ -227,7 +227,7 @@ module divider
 		 .Z(sri));
 
 	INV_X1 INV0
-		(.A1(count[0]),
+		(.A(count[0]),
 		 .ZN(is_sub));
 
 	OR2_X1 O20
@@ -257,7 +257,7 @@ module divider
 		 .S(count[0]),
 		 .Z(rem_in[0]));
 
-	INV_X1 I0
+	INV_X1 INV1
 		(.A(RN),
 		 .ZN(R));
 
